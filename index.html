@@ -3,11 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- 🔧 CUSTOMIZE: Update title and description for your product -->
     <title>Rifaq - Coming Soon | Revolutionary Data Management Platform</title>
     <meta name="description" content="Join the waitlist for Rifaq - the revolutionary platform that will transform your data management workflow. Get early access to cutting-edge productivity tools.">
     <meta name="keywords" content="Rifaq, data management, productivity, workflow, startup, early access, waitlist">
     <meta name="author" content="Rifaq">
     
+    <!-- 🔧 CUSTOMIZE: Update your GitHub Pages URL -->
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://yourusername.github.io/rifaq-landing/">
@@ -20,7 +23,7 @@
     <meta property="twitter:title" content="Rifaq - Revolutionary Data Management Platform">
     <meta property="twitter:description" content="Join the waitlist for early access to Rifaq - transforming data management workflows.">
     
-    <!-- Favicon -->
+    <!-- Favicon with your brand letter -->
     <link rel="icon" type="image/x-icon" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiByeD0iOCIgZmlsbD0iIzAwYjg5NCIvPgo8dGV4dCB4PSIxNiIgeT0iMjIiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjE4IiBmb250LXdlaWdodD0iYm9sZCIgZmlsbD0id2hpdGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiPlI8L3RleHQ+Cjwvc3ZnPgo=">
     
     <style>
@@ -36,6 +39,7 @@
             min-height: 100vh;
             color: #333;
             line-height: 1.6;
+            /* Mobile-first responsive approach */
         }
 
         .container {
@@ -61,6 +65,7 @@
             gap: 10px;
         }
 
+        /* 🔧 CUSTOMIZE: Change logo colors and letter */
         .logo-placeholder {
             width: 50px;
             height: 50px;
@@ -73,6 +78,11 @@
             font-size: 20px;
             font-weight: bold;
             box-shadow: 0 4px 12px rgba(0, 184, 148, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .logo-placeholder:hover {
+            transform: rotate(5deg) scale(1.05);
         }
 
         .user-icon {
@@ -97,6 +107,7 @@
             flex: 1;
         }
 
+        /* 🔧 CUSTOMIZE: Update greeting text */
         .greeting h1 {
             font-size: 1.5rem;
             font-weight: 600;
@@ -153,6 +164,7 @@
             background: #444;
         }
 
+        /* 🔧 CUSTOMIZE: Change main card colors and content */
         .main-card {
             background: linear-gradient(135deg, #00b894 0%, #4a90e2 100%);
             border-radius: 24px;
@@ -186,6 +198,7 @@
             z-index: 2;
         }
 
+        /* 🔧 CUSTOMIZE: Update main heading and description */
         .main-card h2 {
             font-size: 2rem;
             font-weight: 700;
@@ -200,6 +213,7 @@
             line-height: 1.5;
         }
 
+        /* 🔧 CUSTOMIZE: Change bot emoji */
         .bot-illustration {
             width: 80px;
             height: 80px;
@@ -215,11 +229,11 @@
         }
 
         .bot-illustration::before {
-            content: '🤖';
+            content: '🤖'; /* Change this emoji */
         }
 
         .bot-illustration::after {
-            content: '💚';
+            content: '💚'; /* Change this emoji */
             position: absolute;
             bottom: -5px;
             right: -5px;
@@ -245,6 +259,7 @@
             margin-bottom: 25px;
         }
 
+        /* 🔧 CUSTOMIZE: Update signup section text */
         .signup-section h3 {
             font-size: 1.3rem;
             font-weight: 600;
@@ -289,6 +304,7 @@
             background: white;
         }
 
+        /* 🔧 CUSTOMIZE: Change signup button colors and text */
         .signup-btn {
             width: 100%;
             padding: 18px;
@@ -338,6 +354,7 @@
             margin-bottom: 30px;
         }
 
+        /* 🔧 CUSTOMIZE: Update features section heading */
         .quick-actions h3 {
             font-size: 1.2rem;
             font-weight: 600;
@@ -366,6 +383,7 @@
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
         }
 
+        /* 🔧 CUSTOMIZE: Change feature icons and text */
         .feature-icon {
             font-size: 2rem;
             margin-bottom: 8px;
@@ -412,6 +430,7 @@
             }
         }
 
+        /* 🔧 CUSTOMIZE: Update social proof text and count */
         .social-proof {
             text-align: center;
             font-size: 0.9rem;
@@ -452,13 +471,14 @@
             overflow: hidden;
         }
 
-        /* Bottom spacing */
         .bottom-space {
             flex: 1;
             min-height: 50px;
         }
 
-        /* Tablet and larger screens */
+        /* RESPONSIVE BREAKPOINTS */
+        
+        /* Tablet Portrait (768px+) */
         @media (min-width: 768px) {
             .container {
                 max-width: 450px;
@@ -480,9 +500,18 @@
             .features-grid {
                 grid-template-columns: repeat(3, 1fr);
             }
+
+            .action-buttons {
+                gap: 20px;
+            }
+
+            .action-btn {
+                padding: 18px 25px;
+                font-size: 16px;
+            }
         }
 
-        /* Desktop screens */
+        /* Tablet Landscape & Small Desktop (1024px+) */
         @media (min-width: 1024px) {
             body {
                 display: flex;
@@ -495,34 +524,209 @@
                 min-height: auto;
                 max-height: 90vh;
                 overflow-y: auto;
+                max-width: 500px;
+            }
+
+            .features-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+            .main-card h2 {
+                font-size: 3rem;
+            }
+
+            .greeting h1 {
+                font-size: 1.8rem;
             }
         }
 
-        /* Extra animations */
-        .feature-card:nth-child(1) { animation-delay: 0.1s; }
-        .feature-card:nth-child(2) { animation-delay: 0.2s; }
-        .feature-card:nth-child(3) { animation-delay: 0.3s; }
-        .feature-card:nth-child(4) { animation-delay: 0.4s; }
+        /* Large Desktop (1200px+) */
+        @media (min-width: 1200px) {
+            .container {
+                max-width: 600px;
+            }
 
-        .fade-in {
-            animation: fadeInUp 0.6s ease forwards;
-            opacity: 0;
+            .main-card {
+                padding: 60px 50px;
+            }
+
+            .signup-section {
+                padding: 50px 45px;
+            }
+
+            .features-grid {
+                gap: 20px;
+            }
+
+            .feature-card {
+                padding: 25px 20px;
+            }
         }
 
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
+        /* Mobile Landscape */
+        @media (max-width: 767px) and (orientation: landscape) {
+            .container {
+                padding: 15px;
             }
-            to {
-                opacity: 1;
-                transform: translateY(0);
+
+            .main-card {
+                padding: 30px 25px;
+            }
+
+            .main-card h2 {
+                font-size: 1.8rem;
+            }
+
+            .features-grid {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 10px;
+            }
+
+            .feature-card {
+                padding: 15px 10px;
+            }
+
+            .feature-card h4 {
+                font-size: 0.8rem;
+            }
+
+            .feature-card p {
+                font-size: 0.7rem;
+            }
+        }
+
+        /* Extra Small Mobile (320px-480px) */
+        @media (max-width: 480px) {
+            .container {
+                padding: 15px;
+            }
+
+            .header {
+                gap: 10px;
+                margin-bottom: 20px;
+            }
+
+            .logo-placeholder,
+            .user-icon {
+                width: 40px;
+                height: 40px;
+                font-size: 16px;
+            }
+
+            .greeting h1 {
+                font-size: 1.3rem;
+            }
+
+            .greeting-text {
+                font-size: 1rem;
+            }
+
+            .action-buttons {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .action-btn {
+                padding: 14px 18px;
+            }
+
+            .main-card {
+                padding: 30px 20px;
+            }
+
+            .main-card h2 {
+                font-size: 1.6rem;
+            }
+
+            .main-card p {
+                font-size: 1rem;
+            }
+
+            .signup-section {
+                padding: 25px 20px;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 10px;
+            }
+        }
+
+        /* High DPI / Retina displays */
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+            .logo-placeholder,
+            .user-icon,
+            .bot-illustration {
+                image-rendering: -webkit-optimize-contrast;
+                image-rendering: crisp-edges;
+            }
+        }
+
+        /* Dark mode support */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+                color: #fff;
+            }
+
+            .signup-section {
+                background: rgba(255, 255, 255, 0.05);
+                backdrop-filter: blur(10px);
+            }
+
+            .feature-card {
+                background: rgba(255, 255, 255, 0.08);
+                color: #fff;
+            }
+
+            .email-input {
+                background: rgba(255, 255, 255, 0.1);
+                color: #fff;
+                border-color: rgba(255, 255, 255, 0.2);
+            }
+
+            .email-input::placeholder {
+                color: rgba(255, 255, 255, 0.6);
+            }
+        }
+
+        /* Reduced motion preference */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        /* Touch device optimizations */
+        @media (hover: none) and (pointer: coarse) {
+            .feature-card:hover,
+            .action-btn:hover,
+            .signup-btn:hover {
+                transform: none;
+            }
+
+            .feature-card:active,
+            .action-btn:active {
+                transform: scale(0.98);
+            }
+
+            .signup-btn,
+            .action-btn {
+                padding: 18px 25px; /* Larger touch targets */
+                font-size: 16px;
+            }
+
+            .email-input {
+                font-size: 16px; /* Prevents zoom on iOS */
             }
         }
 
         /* Focus styles for accessibility */
         .signup-btn:focus,
-        .email-input:focus {
+        .email-input:focus,
+        .action-btn:focus {
             outline: 2px solid #00b894;
             outline-offset: 2px;
         }
@@ -539,6 +743,30 @@
             25% { transform: translateX(-5px); }
             75% { transform: translateX(5px); }
         }
+
+        /* Fade in animation */
+        .fade-in {
+            animation: fadeInUp 0.6s ease forwards;
+            opacity: 0;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Animation delays for staggered effect */
+        .fade-in:nth-child(1) { animation-delay: 0.1s; }
+        .fade-in:nth-child(2) { animation-delay: 0.2s; }
+        .fade-in:nth-child(3) { animation-delay: 0.3s; }
+        .fade-in:nth-child(4) { animation-delay: 0.4s; }
+        .fade-in:nth-child(5) { animation-delay: 0.5s; }
     </style>
 </head>
 <body>
@@ -547,9 +775,11 @@
         <div class="header fade-in">
             <div class="user-icon"></div>
             <div class="greeting">
+                <!-- 🔧 CUSTOMIZE: Update greeting text -->
                 <h1>Good morning</h1>
                 <div class="greeting-text">Welcome to Rifaq</div>
             </div>
+            <!-- 🔧 CUSTOMIZE: Change logo letter and colors in CSS above -->
             <div class="logo-placeholder" title="Rifaq">R</div>
         </div>
 
@@ -558,6 +788,7 @@
             <button class="action-btn primary-btn" onclick="scrollToSignup()">
                 📍 Join Waitlist
             </button>
+            <!-- 🔧 CUSTOMIZE: Update contact email -->
             <button class="action-btn secondary-btn" onclick="window.open('mailto:support@rifaq.com', '_blank')">
                 📧 Contact Us
             </button>
@@ -567,6 +798,7 @@
         <div class="main-card fade-in">
             <div class="card-content">
                 <div class="bot-illustration"></div>
+                <!-- 🔧 CUSTOMIZE: Update main headline and description -->
                 <h2>Say hello to your new workflow</h2>
                 <p>Small steps become big change. Join our early access program and be the first to experience the future.</p>
             </div>
@@ -574,10 +806,12 @@
 
         <!-- Signup Section -->
         <div class="signup-section fade-in" id="signupSection">
+            <!-- 🔧 CUSTOMIZE: Update signup section text -->
             <h3>Get Early Access</h3>
             <p>Be the first to know when Rifaq launches. Join our exclusive early access list.</p>
 
-            <!-- IMPORTANT: Replace YOUR_FORM_ID with your actual Formspree form ID -->
+            <!-- 🚨 CRITICAL: Replace YOUR_FORM_ID with your actual Formspree form ID -->
+            <!-- Get one free at https://formspree.io -->
             <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="signup-form" id="signupForm">
                 <input 
                     type="email" 
@@ -589,7 +823,7 @@
                     autocomplete="email"
                 >
                 
-                <!-- Hidden fields for data collection -->
+                <!-- Hidden fields for analytics (optional, can remove if not needed) -->
                 <input type="hidden" name="timestamp" id="timestamp">
                 <input type="hidden" name="referrer" id="referrer">
                 <input type="hidden" name="user_agent" id="user_agent">
@@ -599,10 +833,11 @@
                 <input type="hidden" name="utm_campaign" id="utm_campaign">
                 <input type="hidden" name="screen_resolution" id="screen_resolution">
                 
-                <!-- Spam prevention -->
+                <!-- Spam prevention (keep these) -->
                 <input type="text" name="_gotcha" class="hidden" tabindex="-1" autocomplete="off">
                 <input type="hidden" name="_subject" value="🚀 New Rifaq Early Access Signup!">
                 
+                <!-- 🔧 CUSTOMIZE: Change button text -->
                 <button type="submit" class="signup-btn" id="submitBtn">
                     <span class="spinner" id="spinner"></span>
                     <span id="btnText">Start a journey →</span>
@@ -610,15 +845,18 @@
             </form>
 
             <div class="success-message" id="successMessage">
+                <!-- 🔧 CUSTOMIZE: Update success message -->
                 <strong>🎉 You're in!</strong><br>
                 Thanks for joining our early access list. We'll send you exclusive updates and be the first to know when Rifaq launches!
             </div>
         </div>
 
-        <!-- Quick Actions / Features -->
+        <!-- Features Section -->
         <div class="quick-actions fade-in">
+            <!-- 🔧 CUSTOMIZE: Update features heading -->
             <h3>Why choose Rifaq?</h3>
             <div class="features-grid">
+                <!-- 🔧 CUSTOMIZE: Update all feature cards with your product's features -->
                 <div class="feature-card">
                     <div class="feature-icon">⚡</div>
                     <h4>Lightning Fast</h4>
@@ -644,6 +882,7 @@
 
         <!-- Social Proof -->
         <div class="social-proof fade-in">
+            <!-- 🔧 CUSTOMIZE: Update social proof text and starting number -->
             Join <span class="count" id="signup-count">647+</span> professionals already waiting for early access
         </div>
 
@@ -653,7 +892,7 @@
     <script>
         // Initialize page data
         document.addEventListener('DOMContentLoaded', function() {
-            // Set hidden field values
+            // Set hidden field values for analytics
             document.getElementById('timestamp').value = new Date().toISOString();
             document.getElementById('referrer').value = document.referrer || 'direct';
             document.getElementById('user_agent').value = navigator.userAgent;
@@ -666,12 +905,12 @@
             document.getElementById('utm_medium').value = urlParams.get('utm_medium') || '';
             document.getElementById('utm_campaign').value = urlParams.get('utm_campaign') || '';
             
-            // Update signup count with realistic variation
-            const baseCount = 647;
+            // 🔧 CUSTOMIZE: Update base count for social proof
+            const baseCount = 647; // Change this to your starting number
             const randomAdd = Math.floor(Math.random() * 30);
             document.getElementById('signup-count').textContent = (baseCount + randomAdd) + '+';
             
-            // Animate elements on load
+            // Animate elements on load with staggered timing
             const fadeElements = document.querySelectorAll('.fade-in');
             fadeElements.forEach((el, index) => {
                 setTimeout(() => {
@@ -679,6 +918,9 @@
                     el.classList.add('fade-in');
                 }, index * 100);
             });
+
+            // 🔧 CUSTOMIZE: Update dynamic greeting based on time
+            updateGreeting();
         });
 
         // Smooth scroll to signup section
@@ -687,9 +929,19 @@
                 behavior: 'smooth',
                 block: 'center'
             });
+            
+            // Add gentle shake to draw attention to email input
+            setTimeout(() => {
+                const emailInput = document.getElementById('emailInput');
+                emailInput.style.animation = 'shake 0.5s ease-in-out';
+                emailInput.focus();
+                setTimeout(() => {
+                    emailInput.style.animation = '';
+                }, 500);
+            }, 500);
         }
 
-        // Enhanced form submission
+        // Enhanced form submission with better UX
         document.getElementById('signupForm').addEventListener('submit', function(e) {
             const submitBtn = document.getElementById('submitBtn');
             const btnText = document.getElementById('btnText');
@@ -706,7 +958,10 @@
                 emailInput.classList.add('error');
                 emailInput.focus();
                 
+                // Show error feedback
+                btnText.textContent = 'Please enter a valid email';
                 setTimeout(() => {
+                    btnText.textContent = 'Start a journey →';
                     emailInput.classList.remove('error');
                 }, 2000);
                 
@@ -724,6 +979,15 @@
                 timestamp: new Date().toISOString(),
                 referrer: document.referrer || 'direct'
             });
+            
+            // If form fails (no redirect), reset after timeout
+            setTimeout(() => {
+                if (submitBtn.disabled) {
+                    submitBtn.disabled = false;
+                    spinner.style.display = 'none';
+                    btnText.textContent = 'Try again';
+                }
+            }, 10000);
         });
 
         // Handle success state if redirected back from Formspree
@@ -732,10 +996,11 @@
             document.getElementById('successMessage').classList.add('show');
             document.getElementById('emailInput').value = '';
             
-            // Update counter
+            // Update counter with celebration
             const countElement = document.getElementById('signup-count');
             const currentCount = parseInt(countElement.textContent);
             countElement.textContent = (currentCount + 1) + '+';
+            countElement.style.animation = 'heartbeat 1s ease';
             
             // Scroll to success message
             setTimeout(() => {
@@ -746,40 +1011,35 @@
             }, 500);
         }
 
-        // Interactive animations
+        // Interactive logo animation
         document.querySelector('.logo-placeholder').addEventListener('click', function() {
-            this.style.transform = 'rotate(360deg)';
+            this.style.transform = 'rotate(360deg) scale(1.1)';
+            this.style.transition = 'transform 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55)';
             setTimeout(() => {
                 this.style.transform = '';
+                this.style.transition = 'all 0.3s ease';
             }, 600);
         });
 
-        // Add subtle hover effects to greeting
-        document.querySelector('.greeting').addEventListener('mouseenter', function() {
-            this.style.transform = 'translateX(5px)';
-        });
-
-        document.querySelector('.greeting').addEventListener('mouseleave', function() {
-            this.style.transform = '';
-        });
-
-        // Dynamic time-based greeting
+        // 🔧 CUSTOMIZE: Update dynamic greeting logic
         function updateGreeting() {
             const hour = new Date().getHours();
+            const greetingH1 = document.querySelector('.greeting h1');
             const greetingText = document.querySelector('.greeting-text');
             
             if (hour < 12) {
+                greetingH1.textContent = 'Good morning';
                 greetingText.textContent = 'Welcome to Rifaq';
             } else if (hour < 17) {
+                greetingH1.textContent = 'Good afternoon';
                 greetingText.textContent = 'Welcome to Rifaq';
             } else {
+                greetingH1.textContent = 'Good evening';
                 greetingText.textContent = 'Welcome to Rifaq';
             }
         }
 
-        updateGreeting();
-
-        // Email input real-time validation
+        // Real-time email validation with visual feedback
         document.getElementById('emailInput').addEventListener('input', function() {
             const email = this.value;
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -788,9 +1048,12 @@
                 if (emailRegex.test(email)) {
                     this.style.borderColor = '#00b894';
                     this.style.background = 'white';
-                } else {
+                } else if (email.includes('@')) {
                     this.style.borderColor = '#ffa500';
                     this.style.background = '#fff9f0';
+                } else {
+                    this.style.borderColor = '#e9ecef';
+                    this.style.background = '#f8f9fa';
                 }
             } else {
                 this.style.borderColor = '#e9ecef';
@@ -798,21 +1061,148 @@
             }
         });
 
-        // Add touch feedback for mobile
+        // Enhanced touch feedback for mobile devices
         if ('ontouchstart' in window) {
-            const buttons = document.querySelectorAll('.action-btn, .feature-card, .signup-btn');
-            buttons.forEach(btn => {
-                btn.addEventListener('touchstart', function() {
+            const interactiveElements = document.querySelectorAll('.action-btn, .feature-card, .signup-btn, .logo-placeholder');
+            
+            interactiveElements.forEach(element => {
+                element.addEventListener('touchstart', function(e) {
                     this.style.transform = 'scale(0.98)';
+                    this.style.transition = 'transform 0.1s ease';
                 });
                 
-                btn.addEventListener('touchend', function() {
+                element.addEventListener('touchend', function(e) {
                     setTimeout(() => {
                         this.style.transform = '';
+                        this.style.transition = 'all 0.3s ease';
                     }, 150);
+                });
+                
+                // Prevent double-tap zoom on iOS
+                element.addEventListener('touchend', function(e) {
+                    e.preventDefault();
                 });
             });
         }
+
+        // Feature card interactions
+        document.querySelectorAll('.feature-card').forEach(card => {
+            card.addEventListener('click', function() {
+                // Add a subtle pulse effect when clicked
+                this.style.animation = 'heartbeat 0.6s ease';
+                setTimeout(() => {
+                    this.style.animation = '';
+                }, 600);
+            });
+        });
+
+        // Progressive enhancement: Add intersection observer for animations
+        if ('IntersectionObserver' in window) {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all fade-in elements
+            document.querySelectorAll('.fade-in').forEach(el => {
+                observer.observe(el);
+            });
+        }
+
+        // Keyboard navigation enhancement
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' && e.target.classList.contains('feature-card')) {
+                e.target.click();
+            }
+        });
+
+        // 🔧 CUSTOMIZE: Update contact email in error handling
+        window.addEventListener('error', function(e) {
+            console.error('Page error:', e.error);
+            // Optionally send error reports to your analytics
+        });
+
+        // Form submission tracking for analytics (optional)
+        document.getElementById('signupForm').addEventListener('submit', function() {
+            // 🔧 CUSTOMIZE: Add your analytics tracking here
+            // Example: gtag('event', 'signup_attempt', { event_category: 'engagement' });
+            
+            // Store submission in local storage for success page detection
+            try {
+                localStorage.setItem('rifaq_signup_attempted', 'true');
+                localStorage.setItem('rifaq_signup_time', Date.now().toString());
+            } catch(e) {
+                // Handle browsers with disabled storage
+                console.log('Local storage not available');
+            }
+        });
+
+        // Check for recent successful submission
+        try {
+            const attemptTime = localStorage.getItem('rifaq_signup_time');
+            if (attemptTime && (Date.now() - parseInt(attemptTime)) < 60000) { // Within 1 minute
+                // Show success message if returning from successful submission
+                const success = urlParams.get('success') || localStorage.getItem('rifaq_signup_success');
+                if (success === 'true') {
+                    document.getElementById('successMessage').classList.add('show');
+                    localStorage.removeItem('rifaq_signup_attempted');
+                    localStorage.removeItem('rifaq_signup_time');
+                    localStorage.setItem('rifaq_signup_success', 'true');
+                }
+            }
+        } catch(e) {
+            // Handle browsers with disabled storage
+            console.log('Local storage not available for success detection');
+        }
     </script>
+
+    <!-- 
+    🔧 CUSTOMIZATION CHECKLIST:
+    
+    1. CRITICAL - UPDATE FORM ACTION:
+       - Replace "YOUR_FORM_ID" with your Formspree form ID
+       - Get free form at https://formspree.io
+       
+    2. UPDATE CONTACT INFO:
+       - Change "support@rifaq.com" to your email
+       - Update GitHub Pages URL in meta tags
+       
+    3. CUSTOMIZE BRANDING:
+       - Change "R" logo letter in HTML and CSS
+       - Update logo colors in .logo-placeholder CSS
+       - Modify color scheme throughout CSS
+       
+    4. UPDATE CONTENT:
+       - Main headline and description in .main-card
+       - Feature cards with your product features
+       - Signup section text
+       - Success message
+       - Social proof text and base count
+       
+    5. OPTIONAL ANALYTICS:
+       - Add Google Analytics or other tracking
+       - Implement conversion tracking
+       - Remove hidden analytics fields if not needed
+       
+    6. SEO OPTIMIZATION:
+       - Update meta description and keywords
+       - Add proper Open Graph images
+       - Update title tag
+       
+    7. TESTING:
+       - Test form submission
+       - Test on multiple devices
+       - Verify responsive design
+       - Check accessibility with screen readers
+    -->
 </body>
 </html>
