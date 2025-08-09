@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rifaq - Coming Soon | Revolutionary Data Management Platform</title>
+    <meta name="description" content="Join the waitlist for Rifaq - the revolutionary platform that will transform your data management workflow. Get early access to cutting-edge productivity tools.">
+    <meta name="keywords" content="Rifaq, data management, productivity, workflow, startup, early access, waitlist">
+    <meta name="author" content="Rifaq">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourusername.github.io/rifaq-landing/">
+    <meta property="og:title" content="Rifaq - Revolutionary Data Management Platform">
+    <meta property="og:description" content="Join the waitlist for early access to Rifaq - transforming data management workflows.">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://yourusername.github.io/rifaq-landing/">
+    <meta property="twitter:title" content="Rifaq - Revolutionary Data Management Platform">
+    <meta property="twitter:description" content="Join the waitlist for early access to Rifaq - transforming data management workflows.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiByeD0iOCIgZmlsbD0iIzAwYjg5NCIvPgo8dGV4dCB4PSIxNiIgeT0iMjIiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjE4IiBmb250LXdlaWdodD0iYm9sZCIgZmlsbD0id2hpdGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiPlI8L3RleHQ+Cjwvc3ZnPgo=">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #00b894 0%, #00a085 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .container {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            position: relative;
+        }
+
+        .background-shapes {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .shape {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .shape:nth-child(1) {
+            width: 80px;
+            height: 80px;
+            top: 20%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .shape:nth-child(2) {
+            width: 120px;
+            height: 120px;
+            top: 60%;
+            right: 15%;
+            animation-delay: 2s;
+        }
+
+        .shape:nth-child(3) {
+            width: 60px;
+            height: 60px;
+            top: 80%;
+            left: 20%;
+            animation-delay: 4s;
+        }
+
+        .shape:nth-child(4) {
+            width: 100px;
+            height: 100px;
+            top: 10%;
+            right: 30%;
+            animation-delay: 1s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+        }
+
+        .main-content {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 60px 40px;
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+            position: relative;
+            z-index: 2;
+            transform: translateY(0);
+            animation: slideUp 0.8s ease-out;
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .logo-placeholder {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, #00b894, #00a085);
+            border-radius: 20px;
+            margin: 0 auto 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 36px;
+            font-weight: bold;
+            box-shadow: 0 10px 20px rgba(0, 184, 148, 0.3);
+            animation: pulse 2s infinite;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .logo-placeholder:hover {
+            transform: scale(1.05);
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #00b894, #00a085);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+        }
+
+        .tagline {
+            font-size: 1.25rem;
+            color: #666;
+            margin-bottom: 40px;
+            line-height: 1.6;
+            font-weight: 500;
+        }
+
+        .description {
+            font-size: 1.1rem;
+            color: #777;
+            margin-bottom: 40px;
+            line-height: 1.7;
+        }
+
+        .signup-form {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .email-input {
+            flex: 1;
+            min-width: 250px;
+            padding: 18px 25px;
+            font-size: 16px;
+            border: 2px solid #e0e0e0;
+            border-radius: 50px;
+            outline: none;
+            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.9);
+        }
+
+        .email-input:focus {
+            border-color: #00b894;
+            box-shadow: 0 0 0 3px rgba(0, 184, 148, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .email-input:valid {
+            border-color: #00b894;
+        }
+
+        .signup-btn {
+            padding: 18px 35px;
+            background: linear-gradient(135deg, #00b894, #00a085);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 184, 148, 0.3);
+            min-width: 150px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .signup-btn:hover:not(:disabled) {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 184, 148, 0.4);
+        }
+
+        .signup-btn:active {
+            transform: translateY(-1px);
+        }
+
+        .signup-btn:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+        }
+
+        .signup-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .signup-btn:hover::before {
+            left: 100%;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .feature {
+            padding: 20px;
+            background: rgba(0, 184, 148, 0.1);
+            border-radius: 15px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .feature:hover {
+            transform: translateY(-5px);
+            background: rgba(0, 184, 148, 0.15);
+            box-shadow: 0 10px 20px rgba(0, 184, 148, 0.1);
+        }
+
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .feature h3 {
+            font-size: 1.1rem;
+            color: #333;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+
+        .feature p {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .success-message {
+            display: none;
+            background: linear-gradient(135deg, #00b894, #00a085);
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            margin-top: 20px;
+            animation: fadeIn 0.5s ease;
+            box-shadow: 0 5px 15px rgba(0, 184, 148, 0.3);
+        }
+
+        .success-message.show {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .social-proof {
+            margin-top: 30px;
+            font-size: 0.9rem;
+            color: #888;
+            font-weight: 500;
+        }
+
+        .social-proof .count {
+            color: #00b894;
+            font-weight: 600;
+        }
+
+        /* Loading spinner */
+        .spinner {
+            display: none;
+            width: 20px;
+            height: 20px;
+            border: 2px solid rgba(255,255,255,0.3);
+            border-radius: 50%;
+            border-top-color: white;
+            animation: spin 1s ease-in-out infinite;
+            margin-right: 10px;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Hidden fields */
+        .hidden {
+            position: absolute;
+            left: -9999px;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            .main-content {
+                padding: 40px 30px;
+                margin: 20px;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .tagline {
+                font-size: 1.1rem;
+            }
+
+            .description {
+                font-size: 1rem;
+            }
+
+            .signup-form {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .email-input, .signup-btn {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+            }
+
+            .logo-placeholder {
+                width: 80px;
+                height: 80px;
+                font-size: 28px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .main-content {
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .features {
+                gap: 15px;
+            }
+
+            .feature {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="background-shapes">
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+
+    <div class="container">
+        <div class="main-content">
+            <div class="logo-placeholder" title="Rifaq Logo">R</div>
+            
+            <h1>Rifaq</h1>
+            
+            <div class="tagline">
+                Revolutionizing the way you manage and interact with data
+            </div>
+            
+            <div class="description">
+                We're building something incredible that will transform your workflow and boost your productivity. Join our exclusive early access list to be the first to experience the future of data management.
+            </div>
+
+            <!-- IMPORTANT: Replace YOUR_FORM_ID with your actual Formspree form ID -->
+            <form action="https://formspree.io/f/xjkojgoq" method="POST" class="signup-form" id="signupForm">
+                <input 
+                    type="email" 
+                    name="email"
+                    class="email-input" 
+                    placeholder="Enter your email address"
+                    required
+                    id="emailInput"
+                    autocomplete="email"
+                >
+                
+                <!-- Hidden fields for additional data collection -->
+                <input type="hidden" name="timestamp" id="timestamp">
+                <input type="hidden" name="referrer" id="referrer">
+                <input type="hidden" name="user_agent" id="user_agent">
+                <input type="hidden" name="page_url" id="page_url">
+                <input type="hidden" name="utm_source" id="utm_source">
+                <input type="hidden" name="utm_medium" id="utm_medium">
+                <input type="hidden" name="utm_campaign" id="utm_campaign">
+                
+                <!-- Honeypot field for spam prevention -->
+                <input type="text" name="_gotcha" class="hidden" tabindex="-1" autocomplete="off">
+                
+                <!-- Formspree configuration -->
+                <input type="hidden" name="_subject" value="New Rifaq Early Access Signup!">
+                <input type="text" name="_replyto" class="hidden" tabindex="-1" autocomplete="off">
+                
+                <button type="submit" class="signup-btn" id="submitBtn">
+                    <span class="spinner" id="spinner"></span>
+                    <span id="btnText">Get Early Access</span>
+                </button>
+            </form>
+
+            <div class="success-message" id="successMessage">
+                🎉 <strong>Welcome aboard!</strong><br>
+                You're now on our early access list. We'll notify you as soon as Rifaq launches with exclusive early bird benefits!
+            </div>
+
+            <div class="features">
+                <div class="feature">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Lightning Fast</h3>
+                    <p>Built for speed and efficiency with cutting-edge technology</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Enterprise Secure</h3>
+                    <p>Your data is protected with bank-level security</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">📱</div>
+                    <h3>Multi-Platform</h3>
+                    <p>Access anywhere, anytime on any device</p>
+                </div>
+            </div>
+
+            <div class="social-proof">
+                Join <span class="count" id="signup-count">500+</span> professionals already on our waitlist
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Set hidden field values when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            // Basic tracking data
+            document.getElementById('timestamp').value = new Date().toISOString();
+            document.getElementById('referrer').value = document.referrer || 'direct';
+            document.getElementById('user_agent').value = navigator.userAgent;
+            document.getElementById('page_url').value = window.location.href;
+            
+            // UTM parameter tracking
+            const urlParams = new URLSearchParams(window.location.search);
+            document.getElementById('utm_source').value = urlParams.get('utm_source') || '';
+            document.getElementById('utm_medium').value = urlParams.get('utm_medium') || '';
+            document.getElementById('utm_campaign').value = urlParams.get('utm_campaign') || '';
+            
+            // Update signup count with some randomness for social proof
+            const baseCount = 523;
+            const randomAdd = Math.floor(Math.random() * 50);
+            document.getElementById('signup-count').textContent = (baseCount + randomAdd) + '+';
+        });
+
+        // Enhanced form submission handling
+        document.getElementById('signupForm').addEventListener('submit', function(e) {
+            const submitBtn = document.getElementById('submitBtn');
+            const btnText = document.getElementById('btnText');
+            const spinner = document.getElementById('spinner');
+            const emailInput = document.getElementById('emailInput');
+            const successMessage = document.getElementById('successMessage');
+            
+            // Show loading state
+            submitBtn.disabled = true;
+            spinner.style.display = 'inline-block';
+            btnText.textContent = 'Signing up...';
+            
+            // Simple email validation
+            const email = emailInput.value;
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            
+            if (!emailRegex.test(email)) {
+                e.preventDefault();
+                alert('Please enter a valid email address');
+                
+                // Reset button state
+                submitBtn.disabled = false;
+                spinner.style.display = 'none';
+                btnText.textContent = 'Get Early Access';
+                return;
+            }
+            
+            // The form will submit to Formspree
+            // After submission, user will either see Formspree's thank you page
+            // or be redirected back here (depending on your Formspree settings)
+            
+            // If you configure Formspree to redirect back to your page with ?success=true
+            // The success handling will work on page load
+        });
+
+        // Handle success state if redirected back from Formspree
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.get('success') === 'true') {
+            document.getElementById('successMessage').classList.add('show');
+            document.getElementById('emailInput').value = '';
+            
+            // Update counter
+            const countElement = document.getElementById('signup-count');
+            const currentCount = parseInt(countElement.textContent);
+            countElement.textContent = (currentCount + 1) + '+';
+        }
+
+        // Interactive logo animation
+        document.querySelector('.logo-placeholder').addEventListener('click', function() {
+            this.style.animation = 'none';
+            setTimeout(() => {
+                this.style.animation = 'pulse 2s infinite';
+            }, 10);
+        });
+
+        // Parallax effect for background shapes
+        let ticking = false;
+        function updateParallax(e) {
+            if (!ticking) {
+                requestAnimationFrame(() => {
+                    const shapes = document.querySelectorAll('.shape');
+                    const mouseX = e.clientX;
+                    const mouseY = e.clientY;
+                    const windowWidth = window.innerWidth;
+                    const windowHeight = window.innerHeight;
+                    
+                    shapes.forEach((shape, index) => {
+                        const speed = (index + 1) * 0.002;
+                        const x = (mouseX - windowWidth / 2) * speed;
+                        const y = (mouseY - windowHeight / 2) * speed;
+                        
+                        shape.style.transform = `translate(${x}px, ${y}px)`;
+                    });
+                    
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        }
+
+        document.addEventListener('mousemove', updateParallax);
+
+        // Add some smooth scroll behavior for better UX
+        document.documentElement.style.scrollBehavior = 'smooth';
+
+        // Performance optimization: only run parallax on non-mobile devices
+        if (window.innerWidth > 768) {
+            document.addEventListener('mousemove', updateParallax);
+        }
+    </script>
+</body>
+</html>
