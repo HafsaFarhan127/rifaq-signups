@@ -36,7 +36,6 @@
             min-height: 100vh;
             color: #333;
             line-height: 1.6;
-            /* Desktop-first approach */
             overflow-x: hidden;
         }
 
@@ -53,13 +52,14 @@
         /* Left Side - Hero Content */
         .hero-section {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            padding: 80px 60px;
+            padding: 40px 40px 60px 40px; /* Reduced top padding from 60px to 40px */
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: flex-start; /* Changed from center to flex-start */
             color: white;
             position: relative;
             overflow: hidden;
+            text-align: center; /* Center all content */
         }
 
         .hero-section::before {
@@ -77,109 +77,69 @@
             position: relative;
             z-index: 2;
             max-width: 500px;
+            margin: 0 auto; /* Center the content */
+            padding-top: 20px; /* Added small top padding for balance */
         }
 
         /* 🔧 CUSTOMIZE: Update header section */
         .hero-header {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            margin-bottom: 50px;
-        }
-
-        .user-icon {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, rgba(255,255,255,0.2), rgba(255,255,255,0.1));
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 28px;
-            backdrop-filter: blur(10px);
-            border: 2px solid rgba(255,255,255,0.3);
-        }
-
-        .user-icon::after {
-            content: '👤';
-            font-size: 24px;
+            margin-bottom: 40px;
         }
 
         .greeting {
-            flex: 1;
+            text-align: center;
         }
 
         .greeting h1 {
-            font-size: 2rem;
+            font-size: 2.2rem;
             font-weight: 600;
-            margin-bottom: 5px;
+            margin-bottom: 8px;
         }
 
         .greeting-text {
-            font-size: 1.3rem;
+            font-size: 1.4rem;
             opacity: 0.9;
             font-weight: 300;
         }
 
-        /* 🔧 CUSTOMIZE: Change logo letter and colors */
-        .logo-placeholder {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, #00b894, #00a085);
-            border-radius: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 24px;
-            font-weight: bold;
-            box-shadow: 0 8px 25px rgba(0, 184, 148, 0.4);
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
-
-        .logo-placeholder:hover {
-            transform: rotate(5deg) scale(1.05);
-        }
-
         /* 🔧 CUSTOMIZE: Update main hero content */
         .hero-main h2 {
-            font-size: 3.5rem;
+            font-size: 3.2rem;
             font-weight: 700;
             margin-bottom: 25px;
             line-height: 1.1;
         }
 
         .hero-main p {
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             margin-bottom: 40px;
             opacity: 0.9;
             line-height: 1.5;
         }
 
         .bot-illustration {
-            width: 120px;
-            height: 120px;
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 50%;
-            margin: 0 0 30px 0;
+            width: 180px;
+            height: 180px;
+            margin: 0 auto 30px auto;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 60px;
             position: relative;
-            animation: float 3s ease-in-out infinite;
-            backdrop-filter: blur(10px);
-            border: 3px solid rgba(255,255,255,0.3);
         }
 
         .bot-illustration::before {
-            content: '🤖'; /* 🔧 CUSTOMIZE: Change this emoji */
+            content: '';
+            display: block;
+            width: 180px;
+            height: 180px;
+            background-image: url('2-modified.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
         }
 
         .bot-illustration::after {
-            content: '💚'; /* 🔧 CUSTOMIZE: Change this emoji */
+            content: '';
             position: absolute;
             bottom: -5px;
             right: -5px;
@@ -189,8 +149,12 @@
 
         .hero-buttons {
             display: flex;
-            gap: 20px;
-            margin-top: 20px;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 30px;
+            max-width: 300px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .hero-btn {
@@ -204,7 +168,9 @@
             text-decoration: none;
             display: inline-flex;
             align-items: center;
+            justify-content: center;
             gap: 10px;
+            width: 100%;
         }
 
         .primary-hero-btn {
@@ -216,8 +182,8 @@
 
         .primary-hero-btn:hover {
             background: rgba(255, 255, 255, 0.3);
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
         }
 
         .secondary-hero-btn {
@@ -228,13 +194,13 @@
 
         .secondary-hero-btn:hover {
             background: rgba(255, 255, 255, 0.1);
-            transform: translateY(-3px);
+            transform: translateY(-2px);
         }
 
         /* Right Side - Signup Content */
         .signup-section {
             background: white;
-            padding: 80px 60px;
+            padding: 60px 40px;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -244,15 +210,16 @@
         .signup-content {
             max-width: 500px;
             width: 100%;
+            margin: 0 auto;
         }
 
-        /* 🔧 CUSTOMIZE: Update signup section text */
         .signup-section h3 {
             font-size: 2.5rem;
             font-weight: 700;
             color: #333;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
             line-height: 1.2;
+            text-align: center;
         }
 
         .signup-section p {
@@ -260,6 +227,7 @@
             margin-bottom: 40px;
             font-size: 1.2rem;
             line-height: 1.6;
+            text-align: center;
         }
 
         .signup-form {
@@ -292,7 +260,6 @@
             background: white;
         }
 
-        /* 🔧 CUSTOMIZE: Change signup button colors and text */
         .signup-btn {
             width: 100%;
             padding: 22px;
@@ -338,12 +305,11 @@
             left: 100%;
         }
 
-        /* Features Grid - Desktop Layout */
+        /* Features Grid */
         .features-section {
-            margin-top: 50px;
+            margin-top: 40px;
         }
 
-        /* 🔧 CUSTOMIZE: Update features heading */
         .features-section h4 {
             font-size: 1.5rem;
             font-weight: 600;
@@ -355,13 +321,13 @@
         .features-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
+            gap: 15px;
         }
 
         .feature-card {
             background: linear-gradient(135deg, #f8f9fa, #e9ecef);
-            border-radius: 20px;
-            padding: 30px 25px;
+            border-radius: 15px;
+            padding: 20px 15px;
             text-align: center;
             transition: all 0.3s ease;
             cursor: pointer;
@@ -369,29 +335,44 @@
         }
 
         .feature-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
             border-color: #00b894;
         }
 
-        /* 🔧 CUSTOMIZE: Change feature icons and content */
         .feature-icon {
-            font-size: 3rem;
-            margin-bottom: 15px;
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 15px auto;
+            display: block;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover .feature-icon {
+            transform: scale(1.1);
+        }
+
+        /* Fallback for when images don't load */
+        .feature-icon.fallback {
+            width: auto;
+            height: auto;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
             display: block;
         }
 
         .feature-card h5 {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             font-weight: 600;
             color: #333;
-            margin-bottom: 8px;
+            margin-bottom: 5px;
         }
 
         .feature-card p {
-            font-size: 1rem;
+            font-size: 0.9rem;
             color: #666;
-            line-height: 1.5;
+            line-height: 1.4;
         }
 
         .success-message {
@@ -399,7 +380,7 @@
             background: linear-gradient(135deg, #00b894, #00a085);
             color: white;
             padding: 25px;
-            border-radius: 20px;
+            border-radius: 15px;
             margin: 20px 0;
             text-align: center;
             animation: slideInUp 0.5s ease;
@@ -421,10 +402,9 @@
             }
         }
 
-        /* 🔧 CUSTOMIZE: Update social proof text and count */
         .social-proof {
             text-align: center;
-            font-size: 1.1rem;
+            font-size: 1rem;
             color: #666;
             margin-top: 30px;
             padding: 20px;
@@ -435,18 +415,13 @@
         .social-proof .count {
             color: #00b894;
             font-weight: 700;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
         }
 
         /* Animations */
         @keyframes shimmer {
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-15px); }
         }
 
         @keyframes heartbeat {
@@ -505,7 +480,7 @@
             75% { transform: translateX(5px); }
         }
 
-        /* RESPONSIVE BREAKPOINTS - Mobile Adaptations */
+        /* RESPONSIVE BREAKPOINTS */
 
         /* Large Tablet (768px - 1023px) */
         @media (max-width: 1023px) {
@@ -514,45 +489,51 @@
                 max-width: 800px;
             }
 
-            .hero-section {
-                padding: 60px 40px;
-                text-align: center;
+            .hero-section,
+            .signup-section {
+                padding: 50px 40px;
             }
 
             .hero-main h2 {
-                font-size: 3rem;
-            }
-
-            .signup-section {
-                padding: 60px 40px;
+                font-size: 2.8rem;
             }
 
             .features-grid {
                 grid-template-columns: repeat(4, 1fr);
-                gap: 15px;
+                gap: 12px;
+            }
+
+            .feature-card {
+                padding: 15px 10px;
+            }
+
+            .hero-buttons {
+                flex-direction: row;
+                max-width: 100%;
             }
         }
 
         /* Tablet Portrait (768px) */
         @media (max-width: 767px) {
-            .hero-section {
-                padding: 50px 30px;
+            .hero-section,
+            .signup-section {
+                padding: 30px 30px 40px 30px; /* Reduced top padding for mobile */
+            }
+
+            .hero-content {
+                padding-top: 10px; /* Reduced for mobile */
             }
 
             .hero-main h2 {
-                font-size: 2.5rem;
+                font-size: 2.4rem;
             }
 
             .hero-main p {
                 font-size: 1.2rem;
             }
 
-            .signup-section {
-                padding: 50px 30px;
-            }
-
             .signup-section h3 {
-                font-size: 2rem;
+                font-size: 2.2rem;
             }
 
             .features-grid {
@@ -561,47 +542,42 @@
 
             .hero-buttons {
                 flex-direction: column;
-                gap: 15px;
+                gap: 12px;
             }
 
-            .hero-btn {
-                width: 100%;
-                justify-content: center;
+            .bot-illustration {
+                width: 150px;
+                height: 150px;
+            }
+
+            .bot-illustration::before {
+                width: 150px;
+                height: 150px;
             }
         }
 
         /* Mobile (480px and below) */
         @media (max-width: 480px) {
-            .hero-section {
-                padding: 40px 20px;
-            }
-
+            .hero-section,
             .signup-section {
-                padding: 40px 20px;
+                padding: 20px 20px 30px 20px; /* Further reduced top padding */
             }
 
-            .hero-header {
-                gap: 15px;
-                margin-bottom: 30px;
-            }
-
-            .user-icon,
-            .logo-placeholder {
-                width: 50px;
-                height: 50px;
-                font-size: 20px;
+            .hero-content {
+                padding-top: 5px; /* Minimal top padding for mobile */
             }
 
             .greeting h1 {
-                font-size: 1.5rem;
+                font-size: 1.8rem;
             }
 
             .greeting-text {
-                font-size: 1.1rem;
+                font-size: 1.2rem;
             }
 
             .hero-main h2 {
                 font-size: 2rem;
+                margin-bottom: 20px;
             }
 
             .hero-main p {
@@ -609,11 +585,11 @@
             }
 
             .signup-section h3 {
-                font-size: 1.8rem;
+                font-size: 1.9rem;
             }
 
             .signup-section p {
-                font-size: 1rem;
+                font-size: 1.1rem;
             }
 
             .email-input {
@@ -627,22 +603,27 @@
             }
 
             .bot-illustration {
-                width: 100px;
-                height: 100px;
-                font-size: 50px;
+                width: 120px;
+                height: 120px;
+                margin-bottom: 20px;
+            }
+
+            .bot-illustration::before {
+                width: 120px;
+                height: 120px;
             }
 
             .features-grid {
                 grid-template-columns: 1fr 1fr;
-                gap: 12px;
+                gap: 10px;
             }
 
             .feature-card {
-                padding: 20px 15px;
+                padding: 15px 12px;
             }
 
             .feature-icon {
-                font-size: 2.5rem;
+                font-size: 2rem;
             }
 
             .feature-card h5 {
@@ -650,7 +631,7 @@
             }
 
             .feature-card p {
-                font-size: 0.9rem;
+                font-size: 0.85rem;
             }
         }
 
@@ -658,7 +639,11 @@
         @media (max-width: 320px) {
             .hero-section,
             .signup-section {
-                padding: 30px 15px;
+                padding: 15px 15px 25px 15px; /* Minimal top padding for very small screens */
+            }
+
+            .hero-content {
+                padding-top: 0; /* No top padding for very small screens */
             }
 
             .hero-main h2 {
@@ -666,32 +651,12 @@
             }
 
             .signup-section h3 {
-                font-size: 1.6rem;
+                font-size: 1.7rem;
             }
 
             .features-grid {
                 grid-template-columns: 1fr;
-                gap: 10px;
-            }
-        }
-
-        /* Touch device optimizations */
-        @media (hover: none) and (pointer: coarse) {
-            .feature-card:hover,
-            .hero-btn:hover,
-            .signup-btn:hover {
-                transform: none;
-            }
-
-            .feature-card:active,
-            .hero-btn:active {
-                transform: scale(0.98);
-            }
-
-            .hero-btn,
-            .signup-btn {
-                padding: 20px 35px;
-                font-size: 18px;
+                gap: 8px;
             }
         }
 
@@ -730,16 +695,6 @@
             }
         }
 
-        /* High DPI displays */
-        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-            .logo-placeholder,
-            .user-icon,
-            .bot-illustration {
-                image-rendering: -webkit-optimize-contrast;
-                image-rendering: crisp-edges;
-            }
-        }
-
         /* Reduced motion */
         @media (prefers-reduced-motion: reduce) {
             * {
@@ -765,20 +720,15 @@
             <div class="hero-content">
                 <!-- Header -->
                 <div class="hero-header fade-in">
-                    <div class="user-icon"></div>
                     <div class="greeting">
-                        <!-- 🔧 CUSTOMIZE: Update greeting text -->
                         <h1>Good morning</h1>
                         <div class="greeting-text">Welcome to Rifaq</div>
                     </div>
-                    <!-- 🔧 CUSTOMIZE: Change logo letter -->
-                    <div class="logo-placeholder" title="Rifaq">R</div>
                 </div>
 
                 <!-- Main Hero Content -->
                 <div class="hero-main fade-in">
                     <div class="bot-illustration"></div>
-                    <!-- 🔧 CUSTOMIZE: Update main headline and description -->
                     <h2>Shifting the burden to technology</h2>
                     <p>Join us in making mental health accessible for all!</p>
                     
@@ -786,7 +736,6 @@
                         <button class="hero-btn primary-hero-btn" onclick="focusSignup()">
                             📍 Join Waitlist
                         </button>
-                        <!-- 🔧 CUSTOMIZE: Update contact email -->
                         <button class="hero-btn secondary-hero-btn" onclick="window.open('mailto:hafsafarhan127@gmail.com', '_blank')">
                             📧 Contact Us
                         </button>
@@ -798,12 +747,9 @@
         <!-- Right Side - Signup Content -->
         <div class="signup-section">
             <div class="signup-content fade-in">
-                <!-- 🔧 CUSTOMIZE: Update signup section text -->
                 <h3>Get Early Access</h3>
                 <p>Be the first to know when Rifaq launches. Join our exclusive early access list and get priority access to revolutionary data management tools.</p>
 
-                <!-- 🚨 CRITICAL: Replace YOUR_FORM_ID with your actual Formspree form ID -->
-                <!-- Get one free at https://formspree.io -->
                 <form action="https://formspree.io/f/xjkojgoq" method="POST" class="signup-form" id="signupForm">
                     <input 
                         type="email" 
@@ -815,7 +761,7 @@
                         autocomplete="email"
                     >
                     
-                    <!-- Hidden fields for analytics (optional) -->
+                    <!-- Hidden fields for analytics -->
                     <input type="hidden" name="timestamp" id="timestamp">
                     <input type="hidden" name="referrer" id="referrer">
                     <input type="hidden" name="user_agent" id="user_agent">
@@ -829,7 +775,6 @@
                     <input type="text" name="_gotcha" class="hidden" tabindex="-1" autocomplete="off">
                     <input type="hidden" name="_subject" value="🚀 New Rifaq Early Access Signup!">
                     
-                    <!-- 🔧 CUSTOMIZE: Change button text -->
                     <button type="submit" class="signup-btn" id="submitBtn">
                         <span class="spinner" id="spinner"></span>
                         <span id="btnText">Start a journey →</span>
@@ -837,43 +782,43 @@
                 </form>
 
                 <div class="success-message" id="successMessage">
-                    <!-- 🔧 CUSTOMIZE: Update success message -->
                     <strong>🎉 You're in!</strong><br>
                     Thanks for joining our early access list. We'll send you exclusive updates and be the first to know when Rifaq launches!
                 </div>
 
                 <!-- Features Section -->
                 <div class="features-section">
-                    <!-- 🔧 CUSTOMIZE: Update features heading -->
                     <h4>Why choose Rifaq?</h4>
                     <div class="features-grid">
-                        <!-- 🔧 CUSTOMIZE: Update all feature cards -->
                         <div class="feature-card">
-                            <div class="feature-icon">⚡</div>
+                              <img src="health.png" alt="Wearable" class="feature-icon" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <div class="feature-icon fallback" style="display:none;">wearable</div>
                             <h5>Wearable Integration</h5>
-                            <p>Optimized for speed and performance</p>
+                            <p>Helps us understand you beyond just words.</p>
                         </div>
                         <div class="feature-card">
-                            <div class="feature-icon">🔒</div>
-                            <h5>Secure</h5>
-                            <p>Enterprise-grade security</p>
+                             <img src="satisfaction.png" alt="surveys" class="feature-icon" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <div class="feature-icon fallback" style="display:none;">📱</div>
+                            <h5>Mental Health Surveys</h5>
+                            <p>Helps us understand you from a professioanl pov.</p>
                         </div>
                         <div class="feature-card">
-                            <div class="feature-icon">📱</div>
-                            <h5>Multi-Device</h5>
-                            <p>Works everywhere you do</p>
+                            <img src="virtual-assistant-integration.png" alt="Chatbot" class="feature-icon" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <div class="feature-icon fallback" style="display:none;">🔒</div>
+                            <h5>Chatbot</h5>
+                            <p>chatbot for a judgement and stigma-free zone</p>
                         </div>
                         <div class="feature-card">
-                            <div class="feature-icon">🚀</div>
-                            <h5>Innovation</h5>
-                            <p>Cutting-edge technology</p>
+                          <img src="metrics.png" alt="Analytics" class="feature-icon" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <div class="feature-icon fallback" style="display:none;">⚡</div>
+                            <h5>Health Analytics</h5>
+                            <p>Optimized for you</p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Social Proof -->
                 <div class="social-proof">
-                    <!-- 🔧 CUSTOMIZE: Update social proof text and starting number -->
                     Join <span class="count" id="signup-count">647+</span> professionals already waiting for early access
                 </div>
             </div>
@@ -896,12 +841,11 @@
             document.getElementById('utm_medium').value = urlParams.get('utm_medium') || '';
             document.getElementById('utm_campaign').value = urlParams.get('utm_campaign') || '';
             
-            // 🔧 CUSTOMIZE: Update base count for social proof
-            const baseCount = 647; // Change this to your starting number
-            const randomAdd = Math.floor(Math.random() * 30);
-            document.getElementById('signup-count').textContent = (baseCount + randomAdd) + '+';
+            // Initialize counter - starts at 90 and increments by 1 each time
+            let currentCount = 90;
+            document.getElementById('signup-count').textContent = currentCount + '+';
             
-            // Animate elements on load with staggered timing
+            // Animate elements on load
             const fadeElements = document.querySelectorAll('.fade-in');
             fadeElements.forEach((el, index) => {
                 setTimeout(() => {
@@ -910,7 +854,6 @@
                 }, index * 200);
             });
 
-            // 🔧 CUSTOMIZE: Update dynamic greeting based on time
             updateGreeting();
         });
 
@@ -922,7 +865,6 @@
                 block: 'center'
             });
             
-            // Add attention-grabbing effect
             setTimeout(() => {
                 emailInput.style.animation = 'shake 0.5s ease-in-out';
                 emailInput.focus();
@@ -932,13 +874,12 @@
             }, 500);
         }
 
-        // Enhanced form submission with better UX
+        // Enhanced form submission
         document.getElementById('signupForm').addEventListener('submit', function(e) {
             const submitBtn = document.getElementById('submitBtn');
             const btnText = document.getElementById('btnText');
             const spinner = document.getElementById('spinner');
             const emailInput = document.getElementById('emailInput');
-            const successMessage = document.getElementById('successMessage');
             
             // Email validation
             const email = emailInput.value.trim();
@@ -949,7 +890,6 @@
                 emailInput.classList.add('error');
                 emailInput.focus();
                 
-                // Show error feedback
                 btnText.textContent = 'Please enter a valid email';
                 setTimeout(() => {
                     btnText.textContent = 'Start a journey →';
@@ -959,17 +899,16 @@
                 return false;
             }
             
+            // Increment counter when form is submitted successfully
+            const countElement = document.getElementById('signup-count');
+            const currentCount = parseInt(countElement.textContent);
+            countElement.textContent = (currentCount + 1) + '+';
+            countElement.style.animation = 'heartbeat 1s ease';
+            
             // Show loading state
             submitBtn.disabled = true;
             spinner.style.display = 'inline-block';
             btnText.textContent = 'Joining...';
-            
-            // Track the submission attempt
-            console.log('Form submitted:', {
-                email: email,
-                timestamp: new Date().toISOString(),
-                referrer: document.referrer || 'direct'
-            });
             
             // Reset button if submission takes too long
             setTimeout(() => {
@@ -981,19 +920,12 @@
             }, 15000);
         });
 
-        // Handle success state if redirected back from Formspree
+        // Handle success state
         const urlParams = new URLSearchParams(window.location.search);
         if (urlParams.get('success') === 'true' || urlParams.get('submitted') === 'true') {
             document.getElementById('successMessage').classList.add('show');
             document.getElementById('emailInput').value = '';
             
-            // Update counter with celebration
-            const countElement = document.getElementById('signup-count');
-            const currentCount = parseInt(countElement.textContent);
-            countElement.textContent = (currentCount + 1) + '+';
-            countElement.style.animation = 'heartbeat 1s ease';
-            
-            // Scroll to success message
             setTimeout(() => {
                 document.getElementById('successMessage').scrollIntoView({ 
                     behavior: 'smooth',
@@ -1002,35 +934,21 @@
             }, 500);
         }
 
-        // Interactive logo animation
-        document.querySelector('.logo-placeholder').addEventListener('click', function() {
-            this.style.transform = 'rotate(360deg) scale(1.2)';
-            this.style.transition = 'transform 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55)';
-            setTimeout(() => {
-                this.style.transform = '';
-                this.style.transition = 'all 0.3s ease';
-            }, 800);
-        });
-
-        // 🔧 CUSTOMIZE: Update dynamic greeting logic
+        // Dynamic greeting
         function updateGreeting() {
             const hour = new Date().getHours();
             const greetingH1 = document.querySelector('.greeting h1');
-            const greetingText = document.querySelector('.greeting-text');
             
             if (hour < 12) {
                 greetingH1.textContent = 'Good morning';
-                greetingText.textContent = 'Welcome to Rifaq';
             } else if (hour < 17) {
                 greetingH1.textContent = 'Good afternoon';
-                greetingText.textContent = 'Welcome to Rifaq';
             } else {
                 greetingH1.textContent = 'Good evening';
-                greetingText.textContent = 'Welcome to Rifaq';
             }
         }
 
-        // Real-time email validation with visual feedback
+        // Real-time email validation
         document.getElementById('emailInput').addEventListener('input', function() {
             const email = this.value;
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -1058,7 +976,7 @@
 
         // Enhanced touch feedback for mobile devices
         if ('ontouchstart' in window) {
-            const interactiveElements = document.querySelectorAll('.hero-btn, .feature-card, .signup-btn, .logo-placeholder');
+            const interactiveElements = document.querySelectorAll('.hero-btn, .feature-card, .signup-btn');
             
             interactiveElements.forEach(element => {
                 element.addEventListener('touchstart', function(e) {
@@ -1075,41 +993,15 @@
             });
         }
 
-        // Feature card interactions with subtle effects
+        // Feature card interactions
         document.querySelectorAll('.feature-card').forEach(card => {
             card.addEventListener('click', function() {
-                // Add pulse effect when clicked
                 this.style.animation = 'heartbeat 0.6s ease';
                 setTimeout(() => {
                     this.style.animation = '';
                 }, 600);
-                
-                // Optional: Add feature-specific actions here
-                console.log('Feature clicked:', this.querySelector('h5').textContent);
             });
         });
-
-        // Progressive enhancement: Intersection Observer for animations
-        if ('IntersectionObserver' in window) {
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -100px 0px'
-            };
-
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateY(0)';
-                    }
-                });
-            }, observerOptions);
-
-            // Observe all fade-in elements
-            document.querySelectorAll('.fade-in').forEach(el => {
-                observer.observe(el);
-            });
-        }
 
         // Keyboard navigation enhancements
         document.addEventListener('keydown', function(e) {
@@ -1123,50 +1015,15 @@
             }
         });
 
-        // 🔧 CUSTOMIZE: Add your analytics tracking here
-        window.addEventListener('error', function(e) {
-            console.error('Page error:', e.error);
-            // Optional: Send error reports to your analytics service
-        });
-
         // Form submission tracking for analytics
         document.getElementById('signupForm').addEventListener('submit', function() {
-            // 🔧 CUSTOMIZE: Add your analytics tracking code here
-            // Example: gtag('event', 'signup_attempt', { event_category: 'engagement' });
-            
-            // Store submission data
             try {
-                localStorage.setItem('rifaq_signup_attempted', 'true');
-                localStorage.setItem('rifaq_signup_time', Date.now().toString());
+                // Note: localStorage not available in Claude.ai artifacts
+                console.log('Signup form submitted');
             } catch(e) {
                 console.log('Local storage not available');
             }
         });
-
-        // Check for successful submission
-        try {
-            const attemptTime = localStorage.getItem('rifaq_signup_time');
-            if (attemptTime && (Date.now() - parseInt(attemptTime)) < 60000) {
-                const success = urlParams.get('success') || localStorage.getItem('rifaq_signup_success');
-                if (success === 'true') {
-                    document.getElementById('successMessage').classList.add('show');
-                    localStorage.removeItem('rifaq_signup_attempted');
-                    localStorage.removeItem('rifaq_signup_time');
-                    localStorage.setItem('rifaq_signup_success', 'true');
-                }
-            }
-        } catch(e) {
-            console.log('Local storage not available for success detection');
-        }
-
-        // Parallax effect for hero background (desktop only)
-        if (window.innerWidth > 1024) {
-            window.addEventListener('scroll', () => {
-                const scrolled = window.pageYOffset;
-                const heroSection = document.querySelector('.hero-section');
-                heroSection.style.transform = `translateY(${scrolled * 0.5}px)`;
-            });
-        }
 
         // Dynamic counter animation
         function animateCounter() {
@@ -1185,45 +1042,6 @@
             setTimeout(increment, 1000);
         }
 
-        // Trigger counter animation on page load
-        setTimeout(animateCounter, 2000);
     </script>
-
-    <!-- 
-    🔧 CUSTOMIZATION CHECKLIST:
-    
-    ✅ CRITICAL - MUST UPDATE:
-    1. Replace "YOUR_FORM_ID" with your Formspree form ID (https://formspree.io)
-    2. Change "support@rifaq.com" to your actual email
-    3. Update GitHub Pages URL in meta tags
-    
-    🎨 BRANDING & DESIGN:
-    4. Change "R" logo letter and colors in .logo-placeholder CSS
-    5. Update "Rifaq" to your product name throughout
-    6. Customize color gradients to match your brand
-    7. Change bot emojis (🤖💚) in .bot-illustration CSS
-    
-    📝 CONTENT UPDATES:
-    8. Update main headline: "Say hello to your new workflow"
-    9. Update description text in hero section
-    10. Customize all 4 feature cards (icons, titles, descriptions)
-    11. Update signup section heading and description
-    12. Modify success message text
-    13. Update social proof text and base count (647)
-    
-    📊 OPTIONAL ENHANCEMENTS:
-    14. Add Google Analytics or tracking code where noted
-    15. Add social media links
-    16. Customize greeting logic in updateGreeting()
-    17. Add more interactive features
-    
-    🧪 TESTING CHECKLIST:
-    - Test form submission works
-    - Verify responsive design on mobile/tablet/desktop
-    - Check email validation
-    - Test all button interactions
-    - Validate accessibility with screen readers
-    - Test in different browsers
-    -->
 </body>
 </html>
