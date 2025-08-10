@@ -21,7 +21,7 @@
     <meta property="twitter:title" content="Rifaq - Revolutionary Data Management Platform">
     <meta property="twitter:description" content="Join the waitlist for early access to Rifaq - transforming data management workflows.">
     
-    <link rel="icon" type="image/x-icon" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiByeD0iOCIgZmlsbD0iIzAwYjg5NCIvPgo8dGV4dCB4PSIxNiIgeT0iMjIiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjE4IiBmb250LXdlaWdodD0iYm9sZCIgZmlsbD0id2hpdGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiPlI8L3RleHQ+Cjwvc3ZnPgo=">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiByeD0iOCIgZmlsbD0iIzJlODJhNyIvPgo8dGV4dCB4PSIxNiIgeT0iMjIiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjE4IiBmb250LXdlaWdodD0iYm9sZCIgZmlsbD0id2hpdGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiPlI8L3RleHQ+Cjwvc3ZnPgo=">
     
     <style>
         * {
@@ -32,7 +32,7 @@
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #2e82a7 0%, #17a2b8 100%);
             min-height: 100vh;
             color: #333;
             line-height: 1.6;
@@ -51,7 +51,7 @@
 
         /* Left Side - Hero Content */
         .hero-section {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #2e82a7 0%, #17a2b8 100%);
             padding: 40px 40px 60px 40px; /* Reduced top padding from 60px to 40px */
             display: flex;
             flex-direction: column;
@@ -199,7 +199,7 @@
 
         /* Right Side - Signup Content */
         .signup-section {
-            background: white;
+            background: #F9F3EE;
             padding: 60px 40px;
             display: flex;
             flex-direction: column;
@@ -216,14 +216,14 @@
         .signup-section h3 {
             font-size: 2.5rem;
             font-weight: 700;
-            color: #333;
+            color: #333333;
             margin-bottom: 20px;
             line-height: 1.2;
             text-align: center;
         }
 
         .signup-section p {
-            color: #666;
+            color: #666666;
             margin-bottom: 40px;
             font-size: 1.2rem;
             line-height: 1.6;
@@ -241,29 +241,36 @@
             width: 100%;
             padding: 20px 25px;
             font-size: 18px;
-            border: 2px solid #e9ecef;
+            border: 2px solid #E0E0E0;
             border-radius: 15px;
             outline: none;
             transition: all 0.3s ease;
-            background: #f8f9fa;
+            background: white;
+            color: black !important; /* Force text color to black */
+        }
+
+        .email-input::placeholder {
+            color: #A9A9A9;
         }
 
         .email-input:focus {
-            border-color: #00b894;
+            border-color: #2e82a7;
             background: white;
-            box-shadow: 0 0 0 4px rgba(0, 184, 148, 0.1);
+            box-shadow: 0 0 0 4px rgba(46, 130, 167, 0.1);
             transform: translateY(-2px);
+            color: black !important; /* Ensure focused text is black */
         }
 
         .email-input:valid {
-            border-color: #00b894;
+            border-color: #2e82a7;
             background: white;
+            color: black !important; /* Ensure valid input text is black */
         }
 
         .signup-btn {
             width: 100%;
             padding: 22px;
-            background: linear-gradient(135deg, #ff6b35, #f7931e);
+            background: linear-gradient(135deg, #FF4081, #f7931e);
             color: white;
             border: none;
             border-radius: 15px;
@@ -271,14 +278,14 @@
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
-            box-shadow: 0 8px 25px rgba(255, 107, 53, 0.3);
+            box-shadow: 0 8px 25px rgba(255, 64, 129, 0.3);
             position: relative;
             overflow: hidden;
         }
 
         .signup-btn:hover:not(:disabled) {
             transform: translateY(-3px);
-            box-shadow: 0 12px 35px rgba(255, 107, 53, 0.4);
+            box-shadow: 0 12px 35px rgba(255, 64, 129, 0.4);
         }
 
         .signup-btn:active {
@@ -313,7 +320,7 @@
         .features-section h4 {
             font-size: 1.5rem;
             font-weight: 600;
-            color: #333;
+            color: #333333;
             margin-bottom: 25px;
             text-align: center;
         }
@@ -325,19 +332,19 @@
         }
 
         .feature-card {
-            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            background: white;
+            border: 2px solid #E0E0E0;
             border-radius: 15px;
             padding: 20px 15px;
             text-align: center;
             transition: all 0.3s ease;
             cursor: pointer;
-            border: 2px solid transparent;
         }
 
         .feature-card:hover {
             transform: translateY(-3px);
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-            border-color: #00b894;
+            border-color: #2e82a7;
         }
 
         .feature-icon {
@@ -365,26 +372,26 @@
         .feature-card h5 {
             font-size: 1.1rem;
             font-weight: 600;
-            color: #333;
+            color: #333333;
             margin-bottom: 5px;
         }
 
         .feature-card p {
             font-size: 0.9rem;
-            color: #666;
+            color: #666666;
             line-height: 1.4;
         }
 
         .success-message {
             display: none;
-            background: linear-gradient(135deg, #00b894, #00a085);
+            background: linear-gradient(135deg, #00FF00, #00a085);
             color: white;
             padding: 25px;
             border-radius: 15px;
             margin: 20px 0;
             text-align: center;
             animation: slideInUp 0.5s ease;
-            box-shadow: 0 8px 30px rgba(0, 184, 148, 0.3);
+            box-shadow: 0 8px 30px rgba(0, 255, 0, 0.3);
         }
 
         .success-message.show {
@@ -405,15 +412,15 @@
         .social-proof {
             text-align: center;
             font-size: 1rem;
-            color: #666;
+            color: #666666;
             margin-top: 30px;
             padding: 20px;
-            background: rgba(0, 184, 148, 0.05);
+            background: rgba(46, 130, 167, 0.05);
             border-radius: 15px;
         }
 
         .social-proof .count {
-            color: #00b894;
+            color: #2e82a7;
             font-weight: 700;
             font-size: 1.1rem;
         }
@@ -469,9 +476,10 @@
         }
 
         .email-input.error {
-            border-color: #ff6b6b;
-            background: #fff5f5;
+            border-color: #FF0000;
+            background: #FFF0F0;
             animation: shake 0.5s ease-in-out;
+            color: black !important; /* Keep text black even in error state */
         }
 
         @keyframes shake {
@@ -595,6 +603,7 @@
             .email-input {
                 padding: 18px 20px;
                 font-size: 16px;
+                color: black !important; /* Ensure mobile text is black */
             }
 
             .signup-btn {
@@ -663,18 +672,19 @@
         /* Dark mode support */
         @media (prefers-color-scheme: dark) {
             .signup-section {
-                background: #1a1a1a;
+                background: #333333;
                 color: #fff;
             }
 
             .feature-card {
-                background: linear-gradient(135deg, #2d2d2d, #404040);
+                background: #404040;
+                border-color: rgba(255, 255, 255, 0.2);
                 color: #fff;
             }
 
             .email-input {
                 background: rgba(255, 255, 255, 0.1);
-                color: #fff;
+                color: black !important; /* Keep input text black in dark mode too */
                 border-color: rgba(255, 255, 255, 0.2);
             }
 
@@ -708,7 +718,7 @@
         .signup-btn:focus,
         .email-input:focus,
         .hero-btn:focus {
-            outline: 3px solid #00b894;
+            outline: 3px solid #2e82a7;
             outline-offset: 3px;
         }
     </style>
@@ -953,23 +963,26 @@
             const email = this.value;
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             
+            // Force text color to black
+            this.style.color = 'black';
+            
             if (email.length > 0) {
                 if (emailRegex.test(email)) {
-                    this.style.borderColor = '#00b894';
+                    this.style.borderColor = '#2e82a7';
                     this.style.background = 'white';
-                    this.style.boxShadow = '0 0 0 4px rgba(0, 184, 148, 0.1)';
+                    this.style.boxShadow = '0 0 0 4px rgba(46, 130, 167, 0.1)';
                 } else if (email.includes('@')) {
-                    this.style.borderColor = '#ffa500';
+                    this.style.borderColor = '#FFA500';
                     this.style.background = '#fff9f0';
                     this.style.boxShadow = '0 0 0 4px rgba(255, 165, 0, 0.1)';
                 } else {
-                    this.style.borderColor = '#e9ecef';
-                    this.style.background = '#f8f9fa';
+                    this.style.borderColor = '#E0E0E0';
+                    this.style.background = 'white';
                     this.style.boxShadow = 'none';
                 }
             } else {
-                this.style.borderColor = '#e9ecef';
-                this.style.background = '#f8f9fa';
+                this.style.borderColor = '#E0E0E0';
+                this.style.background = 'white';
                 this.style.boxShadow = 'none';
             }
         });
@@ -1041,7 +1054,6 @@
             
             setTimeout(increment, 1000);
         }
-
     </script>
 </body>
 </html>
