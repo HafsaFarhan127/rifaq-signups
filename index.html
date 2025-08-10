@@ -1,28 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!-- 🔧 CUSTOMIZE: Update title and description for your product -->
     <title>Rifaq - Coming Soon | Revolutionary Data Management Platform</title>
-    <meta name="description" content="Join the waitlist for Rifaq - the revolutionary platform that will transform your data management workflow. Get early access to cutting-edge productivity tools.">
+    <meta name="description"
+        content="Join the waitlist for Rifaq - the revolutionary platform that will transform your data management workflow. Get early access to cutting-edge productivity tools.">
     <meta name="keywords" content="Rifaq, data management, productivity, workflow, startup, early access, waitlist">
     <meta name="author" content="Rifaq">
-    
+
     <!-- 🔧 CUSTOMIZE: Update your GitHub Pages URL -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://yourusername.github.io/rifaq-landing/">
     <meta property="og:title" content="Rifaq - Revolutionary Data Management Platform">
-    <meta property="og:description" content="Join the waitlist for early access to Rifaq - transforming data management workflows.">
-    
+    <meta property="og:description"
+        content="Join the waitlist for early access to Rifaq - transforming data management workflows.">
+
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://yourusername.github.io/rifaq-landing/">
     <meta property="twitter:title" content="Rifaq - Revolutionary Data Management Platform">
-    <meta property="twitter:description" content="Join the waitlist for early access to Rifaq - transforming data management workflows.">
-    
-    <link rel="icon" type="image/x-icon" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiByeD0iOCIgZmlsbD0iIzJlODJhNyIvPgo8dGV4dCB4PSIxNiIgeT0iMjIiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjE4IiBmb250LXdlaWdodD0iYm9sZCIgZmlsbD0id2hpdGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiPlI8L3RleHQ+Cjwvc3ZnPgo=">
-    
+    <meta property="twitter:description"
+        content="Join the waitlist for early access to Rifaq - transforming data management workflows.">
+
+    <link rel="icon" type="image/x-icon"
+        href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiByeD0iOCIgZmlsbD0iIzJlODJhNyIvPgo8dGV4dCB4PSIxNiIgeT0iMjIiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjE4IiBmb250LXdlaWdodD0iYm9sZCIgZmlsbD0id2hpdGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiPlI8L3RleHQ+Cjwvc3ZnPgo=">
+
     <style>
         * {
             margin: 0;
@@ -32,7 +37,7 @@
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background: linear-gradient(135deg, #2e82a7 0%, #17a2b8 100%);
+            background: #f9ecda;
             min-height: 100vh;
             color: #333;
             line-height: 1.6;
@@ -51,15 +56,18 @@
 
         /* Left Side - Hero Content */
         .hero-section {
-            background: linear-gradient(135deg, #2e82a7 0%, #17a2b8 100%);
-            padding: 40px 40px 60px 40px; /* Reduced top padding from 60px to 40px */
+            background: #f9ecda;
+            padding: 40px 40px 60px 40px;
+            /* Reduced top padding from 60px to 40px */
             display: flex;
             flex-direction: column;
-            justify-content: flex-start; /* Changed from center to flex-start */
-            color: white;
+            justify-content: flex-start;
+            /* Changed from center to flex-start */
+            color: black;
             position: relative;
             overflow: hidden;
-            text-align: center; /* Center all content */
+            text-align: center;
+            /* Center all content */
         }
 
         .hero-section::before {
@@ -69,7 +77,7 @@
             right: -50%;
             width: 200%;
             height: 200%;
-            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
             animation: shimmer 8s linear infinite;
         }
 
@@ -77,8 +85,10 @@
             position: relative;
             z-index: 2;
             max-width: 500px;
-            margin: 0 auto; /* Center the content */
-            padding-top: 20px; /* Added small top padding for balance */
+            margin: 0 auto;
+            /* Center the content */
+            padding-top: 20px;
+            /* Added small top padding for balance */
         }
 
         /* 🔧 CUSTOMIZE: Update header section */
@@ -91,15 +101,18 @@
         }
 
         .greeting h1 {
-            font-size: 2.2rem;
+            font-family: 'Poppins', sans-serif;
+            font-size: 3rem;
             font-weight: 600;
             margin-bottom: 8px;
+            letter-spacing: -0.5px;
         }
 
         .greeting-text {
-            font-size: 1.4rem;
-            opacity: 0.9;
+            font-family: 'Nunito', sans-serif;
+            font-size: 2rem;
             font-weight: 300;
+            opacity: 0.85;
         }
 
         /* 🔧 CUSTOMIZE: Update main hero content */
@@ -130,8 +143,8 @@
         .bot-illustration::before {
             content: '';
             display: block;
-            width: 180px;
-            height: 180px;
+            width: 300px;
+            height: 300px;
             background-image: url('2-modified.png');
             background-size: cover;
             background-repeat: no-repeat;
@@ -174,38 +187,42 @@
         }
 
         .primary-hero-btn {
-            background: rgba(255, 255, 255, 0.2);
+            background: linear-gradient(135deg, #2e82a7 0%, #17a2b8 100%);
             color: white;
-            border: 2px solid rgba(255, 255, 255, 0.3);
+            /* border: 2px solid rgba(255, 255, 255, 0.3); */
             backdrop-filter: blur(10px);
         }
 
         .primary-hero-btn:hover {
-            background: rgba(255, 255, 255, 0.3);
+            background: linear-gradient(135deg, #2e82a7 0%, #17a2b8 100%);
             transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 8px 25px rgba(2, 0, 0, 0.15);
         }
 
         .secondary-hero-btn {
-            background: transparent;
+            background: linear-gradient(135deg, #2e82a7 0%, #17a2b8 100%);
             color: white;
-            border: 2px solid rgba(255, 255, 255, 0.5);
+            /* border: 2px solid rgba(255, 255, 255, 0.5); */
         }
 
         .secondary-hero-btn:hover {
-            background: rgba(255, 255, 255, 0.1);
+            background: linear-gradient(135deg, #2e82a7 0%, #17a2b8 100%);
             transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(2, 0, 0, 0.15);
         }
 
         /* Right Side - Signup Content */
         .signup-section {
-            background: #F9F3EE;
+            background: linear-gradient(135deg, #2e82a7 0%, #17a2b8 100%);
             padding: 60px 40px;
             display: flex;
             flex-direction: column;
             justify-content: center;
             position: relative;
+            color: white;
         }
+
+
 
         .signup-content {
             max-width: 500px;
@@ -216,14 +233,14 @@
         .signup-section h3 {
             font-size: 2.5rem;
             font-weight: 700;
-            color: #333333;
+            /* color: #333333; */
             margin-bottom: 20px;
             line-height: 1.2;
             text-align: center;
         }
 
         .signup-section p {
-            color: #666666;
+            /* color: #666666; */
             margin-bottom: 40px;
             font-size: 1.2rem;
             line-height: 1.6;
@@ -246,7 +263,8 @@
             outline: none;
             transition: all 0.3s ease;
             background: white;
-            color: black !important; /* Force text color to black */
+            color: black !important;
+            /* Force text color to black */
         }
 
         .email-input::placeholder {
@@ -258,13 +276,15 @@
             background: white;
             box-shadow: 0 0 0 4px rgba(46, 130, 167, 0.1);
             transform: translateY(-2px);
-            color: black !important; /* Ensure focused text is black */
+            color: black !important;
+            /* Ensure focused text is black */
         }
 
         .email-input:valid {
             border-color: #2e82a7;
             background: white;
-            color: black !important; /* Ensure valid input text is black */
+            color: black !important;
+            /* Ensure valid input text is black */
         }
 
         .signup-btn {
@@ -304,7 +324,7 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
             transition: left 0.6s;
         }
 
@@ -320,7 +340,7 @@
         .features-section h4 {
             font-size: 1.5rem;
             font-weight: 600;
-            color: #333333;
+            /* color: #333333; */
             margin-bottom: 25px;
             text-align: center;
         }
@@ -399,13 +419,14 @@
         }
 
         @keyframes slideInUp {
-            from { 
-                opacity: 0; 
-                transform: translateY(30px); 
+            from {
+                opacity: 0;
+                transform: translateY(30px);
             }
-            to { 
-                opacity: 1; 
-                transform: translateY(0); 
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
             }
         }
 
@@ -417,30 +438,43 @@
             padding: 20px;
             background: rgba(46, 130, 167, 0.05);
             border-radius: 15px;
+            color:white;
         }
 
         .social-proof .count {
-            color: #2e82a7;
+            color: #f9ecda;
             font-weight: 700;
             font-size: 1.1rem;
         }
 
         /* Animations */
         @keyframes shimmer {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
         }
 
         @keyframes heartbeat {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.2); }
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.2);
+            }
         }
 
         .spinner {
             display: none;
             width: 20px;
             height: 20px;
-            border: 2px solid rgba(255,255,255,0.3);
+            border: 2px solid rgba(255, 255, 255, 0.3);
             border-radius: 50%;
             border-top-color: white;
             animation: spin 1s linear infinite;
@@ -448,7 +482,9 @@
         }
 
         @keyframes spin {
-            to { transform: rotate(360deg); }
+            to {
+                transform: rotate(360deg);
+            }
         }
 
         .hidden {
@@ -469,6 +505,7 @@
                 opacity: 0;
                 transform: translateY(40px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -479,13 +516,24 @@
             border-color: #FF0000;
             background: #FFF0F0;
             animation: shake 0.5s ease-in-out;
-            color: black !important; /* Keep text black even in error state */
+            color: black !important;
+            /* Keep text black even in error state */
         }
 
         @keyframes shake {
-            0%, 100% { transform: translateX(0); }
-            25% { transform: translateX(-5px); }
-            75% { transform: translateX(5px); }
+
+            0%,
+            100% {
+                transform: translateX(0);
+            }
+
+            25% {
+                transform: translateX(-5px);
+            }
+
+            75% {
+                transform: translateX(5px);
+            }
         }
 
         /* RESPONSIVE BREAKPOINTS */
@@ -523,13 +571,16 @@
 
         /* Tablet Portrait (768px) */
         @media (max-width: 767px) {
+
             .hero-section,
             .signup-section {
-                padding: 30px 30px 40px 30px; /* Reduced top padding for mobile */
+                padding: 30px 30px 40px 30px;
+                /* Reduced top padding for mobile */
             }
 
             .hero-content {
-                padding-top: 10px; /* Reduced for mobile */
+                padding-top: 10px;
+                /* Reduced for mobile */
             }
 
             .hero-main h2 {
@@ -553,34 +604,28 @@
                 gap: 12px;
             }
 
-            .bot-illustration {
-                width: 150px;
-                height: 150px;
-            }
-
-            .bot-illustration::before {
-                width: 150px;
-                height: 150px;
-            }
         }
 
         /* Mobile (480px and below) */
         @media (max-width: 480px) {
+
             .hero-section,
             .signup-section {
-                padding: 20px 20px 30px 20px; /* Further reduced top padding */
+                padding: 20px 20px 30px 20px;
+                /* Further reduced top padding */
             }
 
             .hero-content {
-                padding-top: 5px; /* Minimal top padding for mobile */
+                padding-top: 5px;
+                /* Minimal top padding for mobile */
             }
 
             .greeting h1 {
-                font-size: 1.8rem;
+                font-size: 3rem;
             }
 
             .greeting-text {
-                font-size: 1.2rem;
+                font-size: 2rem;
             }
 
             .hero-main h2 {
@@ -603,7 +648,8 @@
             .email-input {
                 padding: 18px 20px;
                 font-size: 16px;
-                color: black !important; /* Ensure mobile text is black */
+                color: black !important;
+                /* Ensure mobile text is black */
             }
 
             .signup-btn {
@@ -646,13 +692,16 @@
 
         /* Extra Small Mobile (320px) */
         @media (max-width: 320px) {
+
             .hero-section,
             .signup-section {
-                padding: 15px 15px 25px 15px; /* Minimal top padding for very small screens */
+                padding: 15px 15px 25px 15px;
+                /* Minimal top padding for very small screens */
             }
 
             .hero-content {
-                padding-top: 0; /* No top padding for very small screens */
+                padding-top: 0;
+                /* No top padding for very small screens */
             }
 
             .hero-main h2 {
@@ -684,7 +733,8 @@
 
             .email-input {
                 background: rgba(255, 255, 255, 0.1);
-                color: black !important; /* Keep input text black in dark mode too */
+                color: black !important;
+                /* Keep input text black in dark mode too */
                 border-color: rgba(255, 255, 255, 0.2);
             }
 
@@ -723,6 +773,7 @@
         }
     </style>
 </head>
+
 <body>
     <div class="main-container">
         <!-- Left Side - Hero Content -->
@@ -741,12 +792,13 @@
                     <div class="bot-illustration"></div>
                     <h2>Shifting the burden to technology</h2>
                     <p>Join us in making mental health accessible for all!</p>
-                    
+
                     <div class="hero-buttons">
                         <button class="hero-btn primary-hero-btn" onclick="focusSignup()">
                             📍 Join Waitlist
                         </button>
-                        <button class="hero-btn secondary-hero-btn" onclick="window.open('mailto:hafsafarhan127@gmail.com', '_blank')">
+                        <button class="hero-btn secondary-hero-btn"
+                            onclick="window.open('mailto:hafsafarhan127@gmail.com', '_blank')">
                             📧 Contact Us
                         </button>
                     </div>
@@ -758,19 +810,13 @@
         <div class="signup-section">
             <div class="signup-content fade-in">
                 <h3>Get Early Access</h3>
-                <p>Be the first to know when Rifaq launches. Join our exclusive early access list and get priority access to revolutionary data management tools.</p>
+                <p>Be the first to know when Rifaq launches. Join our exclusive early access list and get priority
+                    access to revolutionary data management tools.</p>
 
                 <form action="https://formspree.io/f/xjkojgoq" method="POST" class="signup-form" id="signupForm">
-                    <input 
-                        type="email" 
-                        name="email"
-                        class="email-input" 
-                        placeholder="Enter your email address"
-                        required
-                        id="emailInput"
-                        autocomplete="email"
-                    >
-                    
+                    <input type="email" name="email" class="email-input" placeholder="Enter your email address" required
+                        id="emailInput" autocomplete="email">
+
                     <!-- Hidden fields for analytics -->
                     <input type="hidden" name="timestamp" id="timestamp">
                     <input type="hidden" name="referrer" id="referrer">
@@ -780,11 +826,11 @@
                     <input type="hidden" name="utm_medium" id="utm_medium">
                     <input type="hidden" name="utm_campaign" id="utm_campaign">
                     <input type="hidden" name="screen_resolution" id="screen_resolution">
-                    
+
                     <!-- Spam prevention -->
                     <input type="text" name="_gotcha" class="hidden" tabindex="-1" autocomplete="off">
                     <input type="hidden" name="_subject" value="🚀 New Rifaq Early Access Signup!">
-                    
+
                     <button type="submit" class="signup-btn" id="submitBtn">
                         <span class="spinner" id="spinner"></span>
                         <span id="btnText">Start a journey →</span>
@@ -793,7 +839,8 @@
 
                 <div class="success-message" id="successMessage">
                     <strong>🎉 You're in!</strong><br>
-                    Thanks for joining our early access list. We'll send you exclusive updates and be the first to know when Rifaq launches!
+                    Thanks for joining our early access list. We'll send you exclusive updates and be the first to know
+                    when Rifaq launches!
                 </div>
 
                 <!-- Features Section -->
@@ -801,25 +848,29 @@
                     <h4>Why choose Rifaq?</h4>
                     <div class="features-grid">
                         <div class="feature-card">
-                              <img src="health.png" alt="Wearable" class="feature-icon" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <img src="health.png" alt="Wearable" class="feature-icon"
+                                onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
                             <div class="feature-icon fallback" style="display:none;">wearable</div>
                             <h5>Wearable Integration</h5>
                             <p>Helps us understand you beyond just words.</p>
                         </div>
                         <div class="feature-card">
-                             <img src="satisfaction.png" alt="surveys" class="feature-icon" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <img src="satisfaction.png" alt="surveys" class="feature-icon"
+                                onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
                             <div class="feature-icon fallback" style="display:none;">📱</div>
                             <h5>Mental Health Surveys</h5>
                             <p>Helps us understand you from a professioanl pov.</p>
                         </div>
                         <div class="feature-card">
-                            <img src="virtual-assistant-integration.png" alt="Chatbot" class="feature-icon" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <img src="virtual-assistant-integration.png" alt="Chatbot" class="feature-icon"
+                                onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
                             <div class="feature-icon fallback" style="display:none;">🔒</div>
                             <h5>Chatbot</h5>
                             <p>chatbot for a judgement and stigma-free zone</p>
                         </div>
                         <div class="feature-card">
-                          <img src="metrics.png" alt="Analytics" class="feature-icon" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <img src="metrics.png" alt="Analytics" class="feature-icon"
+                                onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
                             <div class="feature-icon fallback" style="display:none;">⚡</div>
                             <h5>Health Analytics</h5>
                             <p>Optimized for you</p>
@@ -829,7 +880,8 @@
 
                 <!-- Social Proof -->
                 <div class="social-proof">
-                    Join <span class="count" id="signup-count">647+</span> professionals already waiting for early access
+                    Join <span class="count" id="signup-count">647+</span> professionals already waiting for early
+                    access
                 </div>
             </div>
         </div>
@@ -837,24 +889,24 @@
 
     <script>
         // Initialize page data
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             // Set hidden field values for analytics
             document.getElementById('timestamp').value = new Date().toISOString();
             document.getElementById('referrer').value = document.referrer || 'direct';
             document.getElementById('user_agent').value = navigator.userAgent;
             document.getElementById('page_url').value = window.location.href;
             document.getElementById('screen_resolution').value = `${screen.width}x${screen.height}`;
-            
+
             // UTM parameter tracking
             const urlParams = new URLSearchParams(window.location.search);
             document.getElementById('utm_source').value = urlParams.get('utm_source') || '';
             document.getElementById('utm_medium').value = urlParams.get('utm_medium') || '';
             document.getElementById('utm_campaign').value = urlParams.get('utm_campaign') || '';
-            
+
             // Initialize counter - starts at 90 and increments by 1 each time
             let currentCount = 90;
             document.getElementById('signup-count').textContent = currentCount + '+';
-            
+
             // Animate elements on load
             const fadeElements = document.querySelectorAll('.fade-in');
             fadeElements.forEach((el, index) => {
@@ -870,11 +922,11 @@
         // Focus on email input when Join Waitlist is clicked
         function focusSignup() {
             const emailInput = document.getElementById('emailInput');
-            emailInput.scrollIntoView({ 
+            emailInput.scrollIntoView({
                 behavior: 'smooth',
                 block: 'center'
             });
-            
+
             setTimeout(() => {
                 emailInput.style.animation = 'shake 0.5s ease-in-out';
                 emailInput.focus();
@@ -885,41 +937,41 @@
         }
 
         // Enhanced form submission
-        document.getElementById('signupForm').addEventListener('submit', function(e) {
+        document.getElementById('signupForm').addEventListener('submit', function (e) {
             const submitBtn = document.getElementById('submitBtn');
             const btnText = document.getElementById('btnText');
             const spinner = document.getElementById('spinner');
             const emailInput = document.getElementById('emailInput');
-            
+
             // Email validation
             const email = emailInput.value.trim();
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            
+
             if (!emailRegex.test(email)) {
                 e.preventDefault();
                 emailInput.classList.add('error');
                 emailInput.focus();
-                
+
                 btnText.textContent = 'Please enter a valid email';
                 setTimeout(() => {
                     btnText.textContent = 'Start a journey →';
                     emailInput.classList.remove('error');
                 }, 3000);
-                
+
                 return false;
             }
-            
+
             // Increment counter when form is submitted successfully
             const countElement = document.getElementById('signup-count');
             const currentCount = parseInt(countElement.textContent);
             countElement.textContent = (currentCount + 1) + '+';
             countElement.style.animation = 'heartbeat 1s ease';
-            
+
             // Show loading state
             submitBtn.disabled = true;
             spinner.style.display = 'inline-block';
             btnText.textContent = 'Joining...';
-            
+
             // Reset button if submission takes too long
             setTimeout(() => {
                 if (submitBtn.disabled) {
@@ -935,9 +987,9 @@
         if (urlParams.get('success') === 'true' || urlParams.get('submitted') === 'true') {
             document.getElementById('successMessage').classList.add('show');
             document.getElementById('emailInput').value = '';
-            
+
             setTimeout(() => {
-                document.getElementById('successMessage').scrollIntoView({ 
+                document.getElementById('successMessage').scrollIntoView({
                     behavior: 'smooth',
                     block: 'center'
                 });
@@ -948,7 +1000,7 @@
         function updateGreeting() {
             const hour = new Date().getHours();
             const greetingH1 = document.querySelector('.greeting h1');
-            
+
             if (hour < 12) {
                 greetingH1.textContent = 'Good morning';
             } else if (hour < 17) {
@@ -959,13 +1011,13 @@
         }
 
         // Real-time email validation
-        document.getElementById('emailInput').addEventListener('input', function() {
+        document.getElementById('emailInput').addEventListener('input', function () {
             const email = this.value;
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            
+
             // Force text color to black
             this.style.color = 'black';
-            
+
             if (email.length > 0) {
                 if (emailRegex.test(email)) {
                     this.style.borderColor = '#2e82a7';
@@ -990,14 +1042,14 @@
         // Enhanced touch feedback for mobile devices
         if ('ontouchstart' in window) {
             const interactiveElements = document.querySelectorAll('.hero-btn, .feature-card, .signup-btn');
-            
+
             interactiveElements.forEach(element => {
-                element.addEventListener('touchstart', function(e) {
+                element.addEventListener('touchstart', function (e) {
                     this.style.transform = 'scale(0.98)';
                     this.style.transition = 'transform 0.1s ease';
                 });
-                
-                element.addEventListener('touchend', function(e) {
+
+                element.addEventListener('touchend', function (e) {
                     setTimeout(() => {
                         this.style.transform = '';
                         this.style.transition = 'all 0.3s ease';
@@ -1008,7 +1060,7 @@
 
         // Feature card interactions
         document.querySelectorAll('.feature-card').forEach(card => {
-            card.addEventListener('click', function() {
+            card.addEventListener('click', function () {
                 this.style.animation = 'heartbeat 0.6s ease';
                 setTimeout(() => {
                     this.style.animation = '';
@@ -1017,11 +1069,11 @@
         });
 
         // Keyboard navigation enhancements
-        document.addEventListener('keydown', function(e) {
+        document.addEventListener('keydown', function (e) {
             if (e.key === 'Enter' && e.target.classList.contains('feature-card')) {
                 e.target.click();
             }
-            
+
             // ESC key to focus email input
             if (e.key === 'Escape') {
                 document.getElementById('emailInput').focus();
@@ -1029,11 +1081,11 @@
         });
 
         // Form submission tracking for analytics
-        document.getElementById('signupForm').addEventListener('submit', function() {
+        document.getElementById('signupForm').addEventListener('submit', function () {
             try {
                 // Note: localStorage not available in Claude.ai artifacts
                 console.log('Signup form submitted');
-            } catch(e) {
+            } catch (e) {
                 console.log('Local storage not available');
             }
         });
@@ -1043,7 +1095,7 @@
             const counter = document.getElementById('signup-count');
             const targetCount = parseInt(counter.textContent);
             let currentCount = Math.max(1, targetCount - 50);
-            
+
             const increment = () => {
                 if (currentCount < targetCount) {
                     currentCount += Math.ceil((targetCount - currentCount) / 10);
@@ -1051,9 +1103,10 @@
                     setTimeout(increment, 50);
                 }
             };
-            
+
             setTimeout(increment, 1000);
         }
     </script>
 </body>
+
 </html>
