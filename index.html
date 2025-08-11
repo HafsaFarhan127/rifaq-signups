@@ -131,8 +131,8 @@
         }
 
         .bot-illustration {
-            width: 180px;
-            height: 180px;
+            width: 300px;
+            height: 300px;
             margin: 0 auto 30px auto;
             display: flex;
             align-items: center;
@@ -143,8 +143,8 @@
         .bot-illustration::before {
             content: '';
             display: block;
-            width: 300px;
-            height: 300px;
+            width: 100%;
+            height: 100%;
             background-image: url('2-modified.png');
             background-size: cover;
             background-repeat: no-repeat;
@@ -222,7 +222,16 @@
             color: white;
         }
 
+        /* form */
+        .form-field {
+            margin-top: 12px;
+        }
 
+        .label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 500;
+        }
 
         .signup-content {
             max-width: 500px;
@@ -254,7 +263,9 @@
             margin-bottom: 30px;
         }
 
-        .email-input {
+        .email-input,
+        .text-input,
+        .select-input {
             width: 100%;
             padding: 20px 25px;
             font-size: 18px;
@@ -267,11 +278,15 @@
             /* Force text color to black */
         }
 
-        .email-input::placeholder {
+        .email-input::placeholder,
+        .text-input::placeholder,
+        .select-input::placeholder {
             color: #A9A9A9;
         }
 
-        .email-input:focus {
+        .email-input:focus,
+        .text-input:focus,
+        .select-input:focus {
             border-color: #2e82a7;
             background: white;
             box-shadow: 0 0 0 4px rgba(46, 130, 167, 0.1);
@@ -280,7 +295,9 @@
             /* Ensure focused text is black */
         }
 
-        .email-input:valid {
+        .email-input:valid,
+        .text-input:valid,
+        .select-input:valid {
             border-color: #2e82a7;
             background: white;
             color: black !important;
@@ -438,7 +455,7 @@
             padding: 20px;
             background: rgba(46, 130, 167, 0.05);
             border-radius: 15px;
-            color:white;
+            color: white;
         }
 
         .social-proof .count {
@@ -493,6 +510,7 @@
             width: 1px;
             height: 1px;
             overflow: hidden;
+            display: none !important;
         }
 
         .fade-in {
@@ -512,7 +530,9 @@
             }
         }
 
-        .email-input.error {
+        .email-input.error,
+        .text-input.error,
+        .select-input.error {
             border-color: #FF0000;
             background: #FFF0F0;
             animation: shake 0.5s ease-in-out;
@@ -657,16 +677,6 @@
                 font-size: 16px;
             }
 
-            .bot-illustration {
-                width: 120px;
-                height: 120px;
-                margin-bottom: 20px;
-            }
-
-            .bot-illustration::before {
-                width: 120px;
-                height: 120px;
-            }
 
             .features-grid {
                 grid-template-columns: 1fr 1fr;
@@ -813,24 +823,50 @@
                 <p>Be the first to know when Rifaq launches. Join our exclusive early access list and get priority
                     access to revolutionary data management tools.</p>
 
-                <form action="https://formspree.io/f/xjkojgoq" method="POST" class="signup-form" id="signupForm">
-                    <input type="email" name="email" class="email-input" placeholder="Enter your email address" required
-                        id="emailInput" autocomplete="email">
+                <form action="https://formspree.io/f/xjkojgoq" method="POST" class="signup-form" id="signupForm"
+                    novalidate>
+
+
+                    <!-- Role -->
+                    <div class="form-field">
+                        <label for="role" class="label">I am a… <span aria-hidden="true">*</span></label>
+                        <select name="role" id="role" class="select-input" required>
+                            <option value="" disabled selected>Select your role</option>
+                            <option value="user">User</option>
+                            <option value="psychologist">Psychologist</option>
+                            <option value="clinician">Clinician (Doctor/Nurse)</option>
+                            <option value="investor">Investor</option>
+                            <option value="mentor">Mentor</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <!-- Role: Other (shown only if “Other” selected) -->
+                    <div class="form-field hidden" id="roleOtherWrap">
+                        <input type="text" name="role_other" id="roleOther" class="text-input"
+                            placeholder="Please specify your role" />
+                    </div>
+                    <!-- Email -->
+                    <div class="form-field">
+                        <input type="email" name="email" class="email-input" placeholder="Enter your email address"
+                            required id="emailInput" autocomplete="email" />
+                    </div>
 
                     <!-- Hidden fields for analytics -->
-                    <input type="hidden" name="timestamp" id="timestamp">
-                    <input type="hidden" name="referrer" id="referrer">
-                    <input type="hidden" name="user_agent" id="user_agent">
-                    <input type="hidden" name="page_url" id="page_url">
-                    <input type="hidden" name="utm_source" id="utm_source">
-                    <input type="hidden" name="utm_medium" id="utm_medium">
-                    <input type="hidden" name="utm_campaign" id="utm_campaign">
-                    <input type="hidden" name="screen_resolution" id="screen_resolution">
+                    <input type="hidden" name="timestamp" id="timestamp" />
+                    <input type="hidden" name="referrer" id="referrer" />
+                    <input type="hidden" name="user_agent" id="user_agent" />
+                    <input type="hidden" name="page_url" id="page_url" />
+                    <input type="hidden" name="utm_source" id="utm_source" />
+                    <input type="hidden" name="utm_medium" id="utm_medium" />
+                    <input type="hidden" name="utm_campaign" id="utm_campaign" />
+                    <input type="hidden" name="screen_resolution" id="screen_resolution" />
 
                     <!-- Spam prevention -->
-                    <input type="text" name="_gotcha" class="hidden" tabindex="-1" autocomplete="off">
-                    <input type="hidden" name="_subject" value="🚀 New Rifaq Early Access Signup!">
+                    <input type="text" name="_gotcha" class="hidden" tabindex="-1" autocomplete="off" />
+                    <input type="hidden" name="_subject" value="🚀 New Rifaq Early Access Signup!" />
 
+                    <!-- Submit -->
                     <button type="submit" class="signup-btn" id="submitBtn">
                         <span class="spinner" id="spinner"></span>
                         <span id="btnText">Start a journey →</span>
@@ -905,16 +941,39 @@
 
             // Initialize counter - starts at 90 and increments by 1 each time
             let currentCount = 90;
-            document.getElementById('signup-count').textContent = currentCount + '+';
+            const countElInit = document.getElementById('signup-count');
+            if (countElInit) countElInit.textContent = currentCount + '+'; // : guard if element missing
 
             // Animate elements on load
             const fadeElements = document.querySelectorAll('.fade-in');
             fadeElements.forEach((el, index) => {
                 setTimeout(() => {
-                    el.style.animationDelay = (index * 0.2) + 's';
+                    el.style.animationDelay = index * 0.2 + 's';
                     el.classList.add('fade-in');
                 }, index * 200);
             });
+
+            // Role select toggle (on load + on change)
+            const roleSelect = document.getElementById('role');
+            const roleOtherWrap = document.getElementById('roleOtherWrap');
+            const roleOther = document.getElementById('roleOther');
+
+            if (roleSelect) {
+                const toggleOther = () => {
+                    if (roleSelect.value === 'other') {
+                        roleOtherWrap?.classList.remove('hidden');
+                        if (roleOther) roleOther.required = true;
+                    } else {
+                        roleOtherWrap?.classList.add('hidden');
+                        if (roleOther) {
+                            roleOther.required = false;
+                            roleOther.value = '';
+                        }
+                    }
+                };
+                roleSelect.addEventListener('change', toggleOther);
+                toggleOther(); // Initialize correct state on load
+            }
 
             updateGreeting();
         });
@@ -943,6 +1002,11 @@
             const spinner = document.getElementById('spinner');
             const emailInput = document.getElementById('emailInput');
 
+            // : fetch role elements here (the ones in DOMContentLoaded are out of scope)
+            const roleSelect = document.getElementById('role');           // 
+            const roleOtherWrap = document.getElementById('roleOtherWrap'); // 
+            const roleOther = document.getElementById('roleOther');         // 
+
             // Email validation
             const email = emailInput.value.trim();
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -961,11 +1025,47 @@
                 return false;
             }
 
+            // Role validation (runs only if select exists in markup)
+            if (roleSelect) {
+                if (!roleSelect.value) {
+                    e.preventDefault();
+                    roleSelect.classList.add('error');
+                    roleSelect.focus();
+
+                    btnText.textContent = 'Please select your role';
+                    setTimeout(() => {
+                        btnText.textContent = 'Start a journey →';
+                        roleSelect.classList.remove('error');
+                    }, 3000);
+
+                    return false;
+                }
+
+                // If "Other" is visible, ensure it's filled
+                const otherVisible = roleOtherWrap && !roleOtherWrap.classList.contains('hidden');
+                if (otherVisible && roleOther && roleOther.value.trim().length === 0) {
+                    e.preventDefault();
+                    roleOther.focus();
+
+                    btnText.textContent = 'Please specify your role';
+                    setTimeout(() => {
+                        btnText.textContent = 'Start a journey →';
+                    }, 3000);
+
+                    return false;
+                }
+            }
+
             // Increment counter when form is submitted successfully
             const countElement = document.getElementById('signup-count');
-            const currentCount = parseInt(countElement.textContent);
-            countElement.textContent = (currentCount + 1) + '+';
-            countElement.style.animation = 'heartbeat 1s ease';
+            if (countElement) {
+                const currentCount = parseInt(countElement.textContent, 10); // : radix
+                countElement.textContent = currentCount + 1 + '+';
+                countElement.style.animation = 'heartbeat 1s ease';
+                setTimeout(() => {
+                    countElement.style.animation = '';
+                }, 1000);
+            }
 
             // Show loading state
             submitBtn.disabled = true;
@@ -987,6 +1087,14 @@
         if (urlParams.get('success') === 'true' || urlParams.get('submitted') === 'true') {
             document.getElementById('successMessage').classList.add('show');
             document.getElementById('emailInput').value = '';
+
+            // Reset role fields (if present)
+            const roleSelect = document.getElementById('role');
+            const roleOtherWrap = document.getElementById('roleOtherWrap');
+            const roleOther = document.getElementById('roleOther');
+            if (roleSelect) roleSelect.selectedIndex = 0;
+            if (roleOther) roleOther.value = '';
+            if (roleOtherWrap) roleOtherWrap.classList.add('hidden');
 
             setTimeout(() => {
                 document.getElementById('successMessage').scrollIntoView({
@@ -1044,12 +1152,12 @@
             const interactiveElements = document.querySelectorAll('.hero-btn, .feature-card, .signup-btn');
 
             interactiveElements.forEach(element => {
-                element.addEventListener('touchstart', function (e) {
+                element.addEventListener('touchstart', function () {
                     this.style.transform = 'scale(0.98)';
                     this.style.transition = 'transform 0.1s ease';
                 });
 
-                element.addEventListener('touchend', function (e) {
+                element.addEventListener('touchend', function () {
                     setTimeout(() => {
                         this.style.transform = '';
                         this.style.transition = 'all 0.3s ease';
@@ -1093,7 +1201,9 @@
         // Dynamic counter animation
         function animateCounter() {
             const counter = document.getElementById('signup-count');
-            const targetCount = parseInt(counter.textContent);
+            if (!counter) return; // : guard
+
+            const targetCount = parseInt(counter.textContent, 10); // : radix
             let currentCount = Math.max(1, targetCount - 50);
 
             const increment = () => {
