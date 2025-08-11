@@ -844,9 +844,10 @@
         }
 
         /* Dark mode support */
+        /*
         @media (prefers-color-scheme: dark) {
             .signup-section {
-                background: #333333;
+                background: var(--primary);
                 color: #fff;
             }
 
@@ -859,7 +860,6 @@
             .email-input {
                 background: rgba(255, 255, 255, 0.1);
                 color: black !important;
-                /* Keep input text black in dark mode too */
                 border-color: rgba(255, 255, 255, 0.2);
             }
 
@@ -879,6 +879,7 @@
                 color: #ccc;
             }
         }
+        */
 
         /* Reduced motion */
         @media (prefers-reduced-motion: reduce) {
@@ -936,7 +937,7 @@
             <div class="signup-content fade-in">
                 <h3>Get Early Access</h3>
                 <p>Be the first to know when Rifaq launches. Join our exclusive early access list and get priority
-                    access to revolutionary data management tools.</p>
+                    access to revolutionary mental health platform.</p>
 
                 <form action="https://formspree.io/f/xjkojgoq" method="POST" class="signup-form" id="signupForm"
                     novalidate>
