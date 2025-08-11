@@ -29,6 +29,13 @@
         href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiByeD0iOCIgZmlsbD0iIzJlODJhNyIvPgo8dGV4dCB4PSIxNiIgeT0iMjIiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjE4IiBmb250LXdlaWdodD0iYm9sZCIgZmlsbD0id2hpdGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiPlI8L3RleHQ+Cjwvc3ZnPgo=">
 
     <style>
+        :root {
+            --bg: #F9F3EE;
+            --primary: #2e82a7;
+            --primary-dark: #226a86;
+            --ink: #121212;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -98,6 +105,99 @@
 
         .greeting {
             text-align: center;
+            padding-block: clamp(24px, 6vw, 72px);
+        }
+
+        .hero-sub {
+            font-family: 'Nunito', sans-serif;
+            font-size: clamp(1.25rem, 2.3vw, 2rem);
+            font-weight: 400;
+            color: color-mix(in oklab, var(--ink), #000 10%);
+            margin: 0;
+        }
+
+        .hero-title {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 800;
+            font-size: clamp(2.2rem, 4vw, 4rem);
+            line-height: 1.05;
+            letter-spacing: -0.02em;
+            color: var(--ink);
+            text-shadow: 0 1px 0 #fff, 0 12px 28px rgba(0, 0, 0, .08);
+            margin: 0 0 .35em;
+        }
+
+        .brand-name {
+            --hl: color-mix(in oklab, var(--primary) 22%, transparent);
+            display: inline-block;
+            font-weight: 800;
+            letter-spacing: .015em;
+
+            /* gradient ink for depth */
+            background: linear-gradient(180deg, var(--primary), var(--primary-dark));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+
+            position: relative;
+            padding: 0 .08em;
+        }
+
+
+        .brand-name::before {
+            content: "";
+            position: absolute;
+            inset: auto -6px -4px -6px;
+            height: .7em;
+            background: var(--hl);
+            filter: blur(6px);
+            opacity: .28;
+            border-radius: 8px;
+            z-index: -1;
+        }
+
+        .brand-name::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -4px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary), var(--primary-dark));
+            border-radius: 3px;
+            transform-origin: left center;
+            transform: scaleX(0);
+            animation: draw 900ms cubic-bezier(.2, .8, .2, 1) .15s forwards;
+        }
+
+        .hero-sub {
+            opacity: 0;
+            transform: translateY(6px);
+            animation: rise 600ms ease-out .05s forwards;
+        }
+
+        @keyframes draw {
+            to {
+                transform: scaleX(1);
+            }
+        }
+
+        @keyframes rise {
+            to {
+                opacity: 1;
+                transform: none;
+            }
+        }
+
+        /* Be nice to users who prefer reduced motion */
+        @media (prefers-reduced-motion: reduce) {
+
+            .brand-name::after,
+            .hero-sub {
+                animation: none;
+                transform: none;
+                opacity: 1;
+            }
         }
 
         .greeting h1 {
@@ -106,6 +206,10 @@
             font-weight: 600;
             margin-bottom: 8px;
             letter-spacing: -0.5px;
+        }
+
+        .greeting p {
+            font-size: 2rem;
         }
 
         .greeting-text {
@@ -231,6 +335,7 @@
             display: block;
             margin-bottom: 6px;
             font-weight: 500;
+            font-size: 1.3rem;
         }
 
         .signup-content {
@@ -792,8 +897,8 @@
                 <!-- Header -->
                 <div class="hero-header fade-in">
                     <div class="greeting">
-                        <h1>Good morning</h1>
-                        <div class="greeting-text">Welcome to Rifaq</div>
+                        <h1 class="hero-title">Good morning</h1>
+                        <p class="hero-sub">Welcome to <span class="brand-name">Rifaq</span></p>
                     </div>
                 </div>
 
@@ -905,11 +1010,25 @@
                             <p>chatbot for a judgement and stigma-free zone</p>
                         </div>
                         <div class="feature-card">
-                            <img src="metrics.png" alt="Analytics" class="feature-icon"
+                            <img src="medical-certificat.png" alt="Clinic Administration" class="feature-icon"
                                 onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
                             <div class="feature-icon fallback" style="display:none;">⚡</div>
-                            <h5>Health Analytics</h5>
-                            <p>Optimized for you</p>
+                            <h5>Clinic Administration</h5>
+                            <p>Central patient registry, triage flags, and capacity overview.</p>
+                        </div>
+                        <div class="feature-card">
+                            <img src="Doctor Workspace.png" alt="Doctor Workspace" class="feature-icon"
+                                onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <div class="feature-icon fallback" style="display:none;">wearable</div>
+                            <h5>Doctor Workspace</h5>
+                            <p>Your patients at a glance with risk, status, and quick actions.</p>
+                        </div>
+                        <div class="feature-card">
+                            <img src="Patient Vitals & Insights.png" alt="Patient Vitals & Insights" class="feature-icon"
+                                onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <div class="feature-icon fallback" style="display:none;">wearable</div>
+                            <h5>Patient Vitals & Insights</h5>
+                            <p>Trends from wearables, chatbot, and surveys in one dashboard.</p>
                         </div>
                     </div>
                 </div>
