@@ -25,15 +25,15 @@
     <meta property="twitter:description"
         content="Join the waitlist for early access to Rifaq - transforming data management workflows.">
 
-    <link rel="icon" type="image/x-icon"
-        href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiByeD0iOCIgZmlsbD0iIzJlODJhNyIvPgo8dGV4dCB4PSIxNiIgeT0iMjIiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjE4IiBmb250LXdlaWdodD0iYm9sZCIgZmlsbD0id2hpdGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiPlI8L3RleHQ+Cjwvc3ZnPgo=">
+    <link rel="icon" type="image/x-icon" href="./Rifaq_Logo.png">
 
     <style>
         :root {
-            --bg: #F9F3EE;
+            --bg: #f9ecda;
             --primary: #2e82a7;
             --primary-dark: #226a86;
             --ink: #121212;
+            --right-grad: linear-gradient(135deg, #2e82a7 0%, #17a2b8 100%);
         }
 
         * {
@@ -49,6 +49,16 @@
             color: #333;
             line-height: 1.6;
             overflow-x: hidden;
+            margin: 0 auto;
+        }
+
+        @media (min-width: 768px) {
+            body {
+                /* first layer = right-side gradient, second layer = beige fill */
+                background:
+                    var(--right-grad) right / 50vw 100% no-repeat,
+                    var(--bg);
+            }
         }
 
         /* DESKTOP-FIRST DESIGN */
@@ -291,33 +301,33 @@
         }
 
         .primary-hero-btn {
-            background: linear-gradient(135deg, #2e82a7 0%, #17a2b8 100%);
+            background:  var(--right-grad);
             color: white;
             /* border: 2px solid rgba(255, 255, 255, 0.3); */
             backdrop-filter: blur(10px);
         }
 
         .primary-hero-btn:hover {
-            background: linear-gradient(135deg, #2e82a7 0%, #17a2b8 100%);
+            background: var(--right-grad);
             transform: translateY(-2px);
             box-shadow: 0 8px 25px rgba(2, 0, 0, 0.15);
         }
 
         .secondary-hero-btn {
-            background: linear-gradient(135deg, #2e82a7 0%, #17a2b8 100%);
+            background: var(--right-grad);
             color: white;
             /* border: 2px solid rgba(255, 255, 255, 0.5); */
         }
 
         .secondary-hero-btn:hover {
-            background: linear-gradient(135deg, #2e82a7 0%, #17a2b8 100%);
+            background: var(--right-grad);
             transform: translateY(-2px);
             box-shadow: 0 8px 25px rgba(2, 0, 0, 0.15);
         }
 
         /* Right Side - Signup Content */
         .signup-section {
-            background: linear-gradient(135deg, #2e82a7 0%, #17a2b8 100%);
+            background: var(--right-grad);
             padding: 60px 40px;
             display: flex;
             flex-direction: column;
@@ -1024,7 +1034,8 @@
                             <p>Your patients at a glance with risk, status, and quick actions.</p>
                         </div>
                         <div class="feature-card">
-                            <img src="Patient Vitals & Insights.png" alt="Patient Vitals & Insights" class="feature-icon"
+                            <img src="Patient Vitals & Insights.png" alt="Patient Vitals & Insights"
+                                class="feature-icon"
                                 onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
                             <div class="feature-icon fallback" style="display:none;">wearable</div>
                             <h5>Patient Vitals & Insights</h5>
